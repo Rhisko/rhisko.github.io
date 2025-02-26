@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "999a5f8d8f52c38557e85787c488d6bb",
+    "revision": "4bf5e01347f3beeb57172ecf8e23eec6",
     "url": "/index.html"
   },
   {
-    "revision": "92346164b76eb4f484fc",
-    "url": "/static/css/main.dde92a82.chunk.css"
+    "revision": "6e27eb852d8970d1d269",
+    "url": "/static/css/main.8557eb0f.chunk.css"
   },
   {
-    "revision": "98d5f46dd7da0bbcde4c",
-    "url": "/static/js/2.e725c9ae.chunk.js"
+    "revision": "c48508764eee62ecf325",
+    "url": "/static/js/2.1045b508.chunk.js"
   },
   {
-    "revision": "92346164b76eb4f484fc",
-    "url": "/static/js/main.2bebce39.chunk.js"
+    "revision": "6e27eb852d8970d1d269",
+    "url": "/static/js/main.e9d48d79.chunk.js"
   },
   {
     "revision": "f4163cc1361175add5e6",
@@ -22,6 +22,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "21f233e19402cc4a66866a7f31191f0d",
     "url": "/static/media/Agustina.21f233e1.woff"
+  },
+  {
+    "revision": "74b28487f3a7119d9cfef3c3c6d67aaa",
+    "url": "/static/media/DevOps.74b28487.svg"
+  },
+  {
+    "revision": "f6ec8397699234a35b05211feaa57e2b",
+    "url": "/static/media/DevOpsEngineer.f6ec8397.svg"
   },
   {
     "revision": "4457817ac2b9993c65e81aa05828fe9c",
@@ -46,6 +54,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b5c77a6aed75cdad9489effd0d5ea411",
     "url": "/static/media/GoogleSans-Regular.b5c77a6a.ttf"
+  },
+  {
+    "revision": "28e8f4771c83ddf5202adfea83bf66ab",
+    "url": "/static/media/HardwareNetworking.28e8f477.svg"
+  },
+  {
+    "revision": "ac35b4c017be08555dfe10778936517d",
+    "url": "/static/media/MachineLearning.ac35b4c0.svg"
   },
   {
     "revision": "ee6539921d713482b8ccd4d0d23961bb",
