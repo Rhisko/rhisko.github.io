@@ -242,10 +242,10 @@ function Expertise() {
           title="Core strengths across automation, platforms, and security."
           subtitle="A practical engineering stack for infrastructure automation, cloud operations, platform reliability, and secure release delivery."
         />
-        <div className="grid gap-4 lg:grid-cols-[0.8fr_1.2fr]">
-          <div className="command-panel">
+        <div className="grid min-w-0 gap-4 lg:grid-cols-[0.8fr_1.2fr]">
+          <div className="command-panel min-w-0">
             <Terminal className="text-[color:var(--accent)]" size={28} />
-            <pre className="dark-copy mt-5 overflow-x-auto text-sm leading-7">
+            <pre className="dark-copy mt-5 max-w-full whitespace-pre-wrap break-words text-xs leading-6 sm:text-sm sm:leading-7">
 {`core_focus:
   automation_review: Jenkins, Ansible, Python, Bash, Groovy
   platform: GCP, Alibaba Cloud, VMware, Kubernetes, GKE
@@ -254,7 +254,7 @@ function Expertise() {
             </pre>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid min-w-0 gap-4 md:grid-cols-2">
             {skills.map((skill, index) => {
               const Icon = icons[index] ?? Code2;
               return (
