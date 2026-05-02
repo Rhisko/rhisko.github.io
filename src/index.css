@@ -182,7 +182,7 @@ body:has([data-theme="indigo"]) {
   }
 
   .executive-panel {
-    @apply rounded-lg border border-white/10 p-6 shadow-2xl shadow-slate-950/30 backdrop-blur-xl md:p-8;
+    @apply rounded-lg border border-white/10 p-6 shadow-2xl shadow-slate-950/30 backdrop-blur-xl md:p-8 lg:border-0 lg:p-0 lg:shadow-none lg:backdrop-blur-0;
     background: rgba(2, 6, 23, 0.32);
   }
 
@@ -227,8 +227,13 @@ body:has([data-theme="indigo"]) {
   }
 
   .stat-tile {
-    @apply rounded-lg border border-white/10 p-4 backdrop-blur;
+    @apply min-w-0 rounded-lg border border-white/10 p-4 backdrop-blur;
     background: rgba(2, 6, 23, 0.38);
+  }
+
+  .metric-value {
+    @apply max-w-full break-words font-black leading-none text-white;
+    font-size: clamp(2rem, 2.8vw, 3rem);
   }
 
   .feature-card,
@@ -309,5 +314,11 @@ body:has([data-theme="indigo"]) {
 
   .scroll-top:hover {
     color: var(--primary);
+  }
+}
+
+@media (min-width: 1024px) {
+  .executive-panel {
+    background: transparent;
   }
 }

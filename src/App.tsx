@@ -96,7 +96,7 @@ function Hero() {
       <div className="hero-bg absolute inset-0 -z-10" />
       <div className="absolute inset-0 -z-10 bg-grid bg-[length:32px_32px] opacity-20" />
 
-      <div className="mx-auto grid min-h-[88vh] max-w-7xl items-center gap-10 px-5 py-14 lg:grid-cols-[1.03fr_0.97fr]">
+      <div className="mx-auto grid min-h-[88vh] w-full max-w-[1540px] items-center gap-10 px-5 py-14 lg:grid-cols-[0.95fr_1.05fr] xl:px-10 2xl:px-12">
         <div className="text-white">
           <div className="premium-pill mb-6">
             <Sparkles size={16} />
@@ -154,10 +154,10 @@ function Hero() {
             </span>
           </div>
 
-          <div className="mt-7 grid gap-3 sm:grid-cols-4">
+          <div className="mt-7 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
             {metrics.map((metric) => (
               <div key={metric.label} className="stat-tile">
-                <p className="text-3xl font-black text-white">{metric.value}</p>
+                <p className="metric-value">{metric.value}</p>
                 <p className="dark-muted mt-1 text-xs font-bold uppercase">{metric.label}</p>
               </div>
             ))}
