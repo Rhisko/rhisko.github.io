@@ -1,0 +1,313 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+[data-theme="executive"] {
+  --primary: #0e7490;
+  --primary-strong: #155e75;
+  --primary-deep: #07111f;
+  --primary-mid: #0f2d45;
+  --accent: #fbbf24;
+  --accent-soft: #fef3c7;
+  --surface-muted: #f6f8fb;
+  --card-shadow: rgba(15, 23, 42, 0.06);
+  --hover-shadow: rgba(14, 116, 144, 0.12);
+}
+
+[data-theme="emerald"] {
+  --primary: #047857;
+  --primary-strong: #065f46;
+  --primary-deep: #061713;
+  --primary-mid: #064e3b;
+  --accent: #a3e635;
+  --accent-soft: #ecfccb;
+  --surface-muted: #f3f8f5;
+  --card-shadow: rgba(6, 95, 70, 0.07);
+  --hover-shadow: rgba(4, 120, 87, 0.15);
+}
+
+[data-theme="graphite"] {
+  --primary: #475569;
+  --primary-strong: #334155;
+  --primary-deep: #0f172a;
+  --primary-mid: #1e293b;
+  --accent: #38bdf8;
+  --accent-soft: #e0f2fe;
+  --surface-muted: #f7f7f8;
+  --card-shadow: rgba(15, 23, 42, 0.08);
+  --hover-shadow: rgba(56, 189, 248, 0.13);
+}
+
+[data-theme="indigo"] {
+  --primary: #4f46e5;
+  --primary-strong: #4338ca;
+  --primary-deep: #151126;
+  --primary-mid: #312e81;
+  --accent: #22d3ee;
+  --accent-soft: #cffafe;
+  --surface-muted: #f6f6ff;
+  --card-shadow: rgba(49, 46, 129, 0.07);
+  --hover-shadow: rgba(79, 70, 229, 0.14);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body:has([data-theme="executive"]),
+body:has([data-theme="emerald"]),
+body:has([data-theme="graphite"]),
+body:has([data-theme="indigo"]) {
+  background: var(--surface-muted);
+}
+
+::selection {
+  background: rgba(251, 191, 36, 0.28);
+}
+
+@layer components {
+  .section-wrap {
+    @apply mx-auto max-w-7xl px-5 py-16;
+  }
+
+  .eyebrow {
+    @apply text-sm font-black uppercase;
+    color: var(--primary);
+  }
+
+  .eyebrow-dark {
+    color: var(--accent);
+  }
+
+  .section-title {
+    @apply mt-3 text-3xl font-black leading-tight tracking-tight md:text-4xl;
+  }
+
+  .section-copy {
+    @apply mt-4 text-base leading-8;
+  }
+
+  .hero-accent {
+    color: var(--accent-soft);
+    text-shadow: 0 14px 42px rgba(0, 0, 0, 0.24);
+  }
+
+  .dark-copy {
+    color: #e2e8f0;
+  }
+
+  .dark-muted {
+    color: #cbd5e1;
+  }
+
+  .dark-link {
+    color: var(--accent-soft);
+  }
+
+  .dark-link:hover {
+    color: #ffffff;
+  }
+
+  .icon-primary {
+    color: var(--primary);
+  }
+
+  .brand-mark {
+    @apply flex h-10 w-10 items-center justify-center rounded-lg shadow-lg;
+    background: var(--primary-deep);
+    color: var(--accent);
+  }
+
+  .nav-link {
+    @apply text-sm font-bold text-slate-600 transition;
+  }
+
+  .nav-link:hover {
+    color: var(--primary);
+  }
+
+  .nav-shell {
+    @apply fixed top-0 z-50 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-xl;
+  }
+
+  .muted-label {
+    color: #64748b;
+  }
+
+  .muted-section,
+  .hero-section {
+    background: var(--surface-muted);
+  }
+
+  .hero-bg {
+    background:
+      radial-gradient(circle at 78% 18%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 28%),
+      linear-gradient(115deg, var(--primary-deep) 0%, var(--primary-mid) 48%, var(--primary-strong) 100%);
+  }
+
+  .dark-section {
+    background: var(--primary-deep);
+  }
+
+  .premium-pill {
+    @apply inline-flex items-center gap-2 rounded-md bg-white/10 px-4 py-2 text-sm font-bold backdrop-blur;
+    border: 1px solid color-mix(in srgb, var(--accent) 34%, transparent);
+    color: var(--accent-soft);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg px-5 py-3 text-sm font-black text-slate-950 shadow-lg transition duration-300 hover:-translate-y-0.5;
+    background: var(--accent);
+    box-shadow: 0 18px 38px color-mix(in srgb, var(--accent) 26%, transparent);
+  }
+
+  .btn-primary:hover {
+    background: color-mix(in srgb, var(--accent) 88%, white);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-lg border border-white/25 bg-white/10 px-5 py-3 text-sm font-black text-white backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/20;
+  }
+
+  .executive-panel {
+    @apply rounded-lg border border-white/10 p-6 shadow-2xl shadow-slate-950/30 backdrop-blur-xl md:p-8;
+    background: rgba(2, 6, 23, 0.32);
+  }
+
+  .profile-frame {
+    @apply relative overflow-hidden rounded-lg p-2 shadow-2xl shadow-slate-950/30;
+    border: 1px solid color-mix(in srgb, var(--accent) 34%, transparent);
+    background:
+      radial-gradient(circle at 18% 12%, color-mix(in srgb, var(--accent) 32%, transparent), transparent 28%),
+      linear-gradient(145deg, color-mix(in srgb, var(--primary) 28%, white), color-mix(in srgb, var(--primary-deep) 76%, black));
+  }
+
+  .profile-frame::before {
+    @apply pointer-events-none absolute inset-2 rounded-md;
+    content: "";
+    background:
+      linear-gradient(120deg, rgba(255, 255, 255, 0.22), transparent 34%),
+      radial-gradient(circle at 80% 15%, rgba(255, 255, 255, 0.12), transparent 32%);
+    mix-blend-mode: screen;
+    z-index: 1;
+  }
+
+  .profile-frame::after {
+    @apply pointer-events-none absolute inset-0;
+    content: "";
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 -80px 90px rgba(2, 6, 23, 0.22);
+    z-index: 3;
+  }
+
+  .profile-photo {
+    @apply relative h-[250px] w-full rounded-md object-cover;
+    object-position: 50% 13%;
+    filter: grayscale(7%) contrast(1.07) saturate(0.94);
+    z-index: 2;
+  }
+
+  .info-row {
+    @apply flex items-center gap-2 rounded-md border border-white/10 bg-white/[0.06] px-3 py-2 backdrop-blur transition hover:bg-white/[0.1];
+  }
+
+  .info-row:hover {
+    border-color: color-mix(in srgb, var(--accent) 58%, transparent);
+  }
+
+  .stat-tile {
+    @apply rounded-lg border border-white/10 p-4 backdrop-blur;
+    background: rgba(2, 6, 23, 0.38);
+  }
+
+  .feature-card,
+  .skill-card,
+  .project-card,
+  .timeline-card,
+  .analysis-card {
+    @apply rounded-lg border border-slate-200 bg-white p-6 transition duration-300 hover:-translate-y-1;
+    box-shadow: 0 20px 58px var(--card-shadow);
+  }
+
+  .feature-card:hover,
+  .skill-card:hover,
+  .project-card:hover,
+  .timeline-card:hover,
+  .analysis-card:hover {
+    border-color: color-mix(in srgb, var(--primary) 34%, white);
+    box-shadow: 0 26px 76px var(--hover-shadow);
+  }
+
+  .command-panel {
+    @apply rounded-lg p-6 shadow-2xl shadow-slate-950/20 lg:sticky lg:top-28 lg:self-start;
+    background: var(--primary-deep);
+  }
+
+  .tag {
+    @apply rounded-md border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-bold text-slate-700;
+  }
+
+  .competency-chip {
+    @apply flex items-start gap-3 rounded-lg border border-white/10 bg-white/[0.05] p-4 text-sm font-semibold leading-6 text-slate-100;
+  }
+
+  .certificate-card {
+    @apply overflow-hidden rounded-lg border border-white/10 shadow-2xl shadow-slate-950/20 transition duration-300 hover:-translate-y-1;
+    background: rgba(15, 23, 42, 0.74);
+  }
+
+  .certificate-card:hover {
+    border-color: color-mix(in srgb, var(--accent) 54%, transparent);
+  }
+
+  .certificate-preview {
+    @apply block h-56 border-b border-white/10 bg-slate-900;
+  }
+
+  .credential-row {
+    @apply flex items-start gap-3 rounded-lg border border-white/10 p-4;
+    background: rgba(15, 23, 42, 0.62);
+  }
+
+  .contact-panel {
+    @apply grid gap-8 rounded-lg p-8 shadow-2xl shadow-slate-950/20 md:p-12 lg:grid-cols-[1fr_0.8fr] lg:items-center;
+    background: linear-gradient(135deg, var(--primary-deep), var(--primary-mid) 55%, var(--primary-strong));
+  }
+
+  .contact-action {
+    @apply flex items-center gap-3 rounded-lg border border-white/10 bg-white/[0.07] px-4 py-4 text-sm font-bold text-white transition hover:bg-white/[0.12];
+  }
+
+  .contact-action:hover {
+    border-color: color-mix(in srgb, var(--accent) 62%, transparent);
+  }
+
+  .card-eyebrow {
+    @apply text-xs font-black uppercase;
+    color: var(--primary);
+  }
+
+  .date-badge {
+    @apply w-fit rounded-md px-4 py-2 text-sm font-bold text-white;
+    background: var(--primary-deep);
+  }
+
+  .scroll-top {
+    @apply fixed bottom-6 right-6 hidden rounded-lg border border-slate-200 bg-white p-4 text-slate-950 shadow-xl transition hover:-translate-y-1 md:inline-flex;
+  }
+
+  .scroll-top:hover {
+    color: var(--primary);
+  }
+}
