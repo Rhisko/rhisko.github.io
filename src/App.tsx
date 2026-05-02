@@ -239,7 +239,7 @@ function Expertise() {
       <div className="mx-auto max-w-7xl px-5">
         <SectionHeader
           eyebrow="Expertise"
-          title="Corporate-ready strengths across automation, platforms, and security."
+          title="Core strengths across automation, platforms, and security."
           subtitle="A practical engineering stack for infrastructure automation, cloud operations, platform reliability, and secure release delivery."
         />
         <div className="grid gap-4 lg:grid-cols-[0.8fr_1.2fr]">
@@ -435,7 +435,7 @@ function Contact() {
       <div className="contact-panel">
         <div>
           <p className="eyebrow eyebrow-dark">Contact</p>
-          <h2 className="mt-3 text-3xl font-black text-white md:text-5xl">Ready for corporate DevOps and DevSecOps delivery.</h2>
+          <h2 className="mt-3 text-3xl font-black text-white md:text-5xl">Ready for  DevOps and DevSecOps delivery.</h2>
           <p className="dark-copy mt-5 max-w-2xl leading-8">
             Best fit: infrastructure automation, CI/CD modernization, Kubernetes operations, cloud platform reliability,
             security hardening automation, observability, and production support maturity.
