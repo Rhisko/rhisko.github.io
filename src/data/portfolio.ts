@@ -1,6 +1,6 @@
 export const profile = {
   name: "Risko",
-  role: "Senior DevOps Engineer | DevSecOps Enthusiast | AI Enthusiast",
+  role: "Senior DevOps Engineer  DevSecOps Enthusiast & AI Enthusiast",
   headline: "Infrastructure automation, cloud reliability, CI/CD security, and production-ready DevOps delivery.",
   tagline:
     "Senior DevOps Engineer with 8+ years of experience across infrastructure automation, CI/CD engineering, cloud operations, Linux administration, Kubernetes, monitoring, and security-focused automation. Currently pursuing a Master’s Degree in Informatics Engineering with academic exposure to cybersecurity, data protection, and artificial intelligence.",
@@ -13,7 +13,7 @@ export const profile = {
 };
 
 export const metrics = [
-  { value: "8+", label: "Years Experience" },
+  { value: "8+", label: "Years Experience as De" },
   { value: "10+", label: "Years in IT Industry" },
   { value: "GCP", label: "Cloud & GKE Delivery" },
   { value: "DevSecOps", label: "Security Automation Focus" }

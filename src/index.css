@@ -232,8 +232,12 @@ body:has([data-theme="indigo"]) {
   }
 
   .metric-value {
-    @apply max-w-full break-words font-black leading-none text-white;
+    @apply max-w-full whitespace-nowrap font-black leading-none text-white;
     font-size: clamp(2rem, 2.8vw, 3rem);
+  }
+
+  .metric-value-devsecops {
+    font-size: clamp(1.2rem, 1.42vw, 1.75rem);
   }
 
   .feature-card,

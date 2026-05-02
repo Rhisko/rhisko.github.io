@@ -134,7 +134,7 @@ function Hero() {
               <p className="eyebrow eyebrow-dark">Keep Moving Forward</p>
               <h2 className="mt-3 text-3xl font-black text-white">{profile.role}</h2>
               <p className="dark-copy mt-3 text-sm leading-7">
-                8+ years Experience, 10+ years in IT industry
+                Over 8 years of experience specializing in DevOps, backed by a 10+ year career in the IT industry.
               </p>
             </div>
           </div>
@@ -157,7 +157,9 @@ function Hero() {
           <div className="mt-7 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
             {metrics.map((metric) => (
               <div key={metric.label} className="stat-tile">
-                <p className="metric-value">{metric.value}</p>
+                <p className={metric.value === "DevSecOps" ? "metric-value metric-value-devsecops" : "metric-value"}>
+                  {metric.value}
+                </p>
                 <p className="dark-muted mt-1 text-xs font-bold uppercase">{metric.label}</p>
               </div>
             ))}
