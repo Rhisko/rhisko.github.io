@@ -1,9 +1,9 @@
 export const profile = {
   name: "Risko",
-  role: "Senior DevOps Engineer  DevSecOps Enthusiast & AI Enthusiast",
-  headline: "Infrastructure automation, cloud reliability, CI/CD security, and production-ready DevOps delivery.",
+  role: "Senior DevOps Engineer | DevSecOps & AI Enthusiast",
+  headline: "Reliable platforms, secure CI/CD, and cloud automation for production teams.",
   tagline:
-    "Senior DevOps Engineer with 8+ years of experience across infrastructure automation, CI/CD engineering, cloud operations, Linux administration, Kubernetes, monitoring, and security-focused automation. Currently pursuing a Master’s Degree in Informatics Engineering with academic exposure to cybersecurity, data protection, and artificial intelligence.",
+    "Senior DevOps Engineer with 8+ years in infrastructure automation, CI/CD engineering, cloud operations, Linux administration, Kubernetes, observability, and security-focused delivery. Supported by 10+ years in IT and current postgraduate study in cybersecurity, data protection, and artificial intelligence.",
   location: "Pamulang, Tangerang Selatan",
   phone: "+62 813 1688 8438",
   email: "risko.alexander@gmail.com",
@@ -13,80 +13,80 @@ export const profile = {
 };
 
 export const metrics = [
-  { value: "8+", label: "Years Experience as De" },
+  { value: "8+", label: "Years in DevOps" },
   { value: "10+", label: "Years in IT Industry" },
   { value: "GCP", label: "Cloud & GKE Delivery" },
-  { value: "DevSecOps", label: "Security Automation Focus" }
+  { value: "DevSecOps", label: "Secure Delivery Focus" }
 ];
 
 export const professionalFocus = [
   {
-    title: "Enterprise DevOps Leadership",
-    value: "Senior DevOps Engineer for regulated, production-critical environments",
+    title: "Production DevOps Leadership",
+    value: "Senior DevOps for regulated and business-critical platforms",
     detail:
-      "Focused on automation governance, infrastructure reliability, CI/CD maturity, and secure operational execution for business-critical platforms."
+      "Translates delivery needs into reliable automation, review discipline, and operational controls for environments where downtime and change risk matter."
   },
   {
     title: "Automation Risk Review",
-    value: "DevOps plus DevSecOps automation review",
+    value: "Jenkins, Ansible, VMware, Python, Bash, and Groovy review",
     detail:
-      "Experienced in reviewing Jenkins, Ansible, VMware, Python, Bash, and Groovy workflows before production execution to reduce operational risk."
+      "Assesses workflows before execution to catch unsafe changes, improve validation, and keep provisioning repeatable."
   },
   {
     title: "Cloud-Native Delivery",
-    value: "GCP, GKE, Kubernetes, ArgoCD, observability, and cost optimization",
+    value: "GCP, GKE, Kubernetes, ArgoCD, observability, and cost control",
     detail:
-      "Delivers cloud-native platforms with Kubernetes, GitOps workflows, monitoring, production security controls, and practical cost awareness."
+      "Builds and operates cloud-native delivery paths with GitOps, monitoring, platform guardrails, and cost-aware operations."
   },
   {
     title: "Infrastructure Foundation",
-    value: "Infrastructure roots from system administration into senior DevOps",
+    value: "Systems, networks, backup, and field support roots",
     detail:
-      "Built on Linux administration, networking, backup and recovery, endpoint support, enterprise hardware, and production troubleshooting."
+      "Grounded in Linux administration, enterprise hardware support, troubleshooting, and service recovery before moving into senior platform engineering."
   }
 ];
 
 export const about = {
-  title: "A senior DevOps profile built for regulated, production-grade environments.",
+  title: "Senior DevOps engineer for regulated, production-grade environments.",
   paragraphs: [
-    "Risko brings hands-on experience reviewing and improving Jenkins pipelines, Ansible playbooks, VMware automation workflows, Kubernetes deployments, monitoring platforms, and cloud infrastructure across Google Cloud Platform and Alibaba Cloud.",
-    "His work combines reliability engineering, automation quality, cloud operations, infrastructure hardening, vulnerability assessment automation, and AI-driven security analysis. He is currently pursuing a Master's Degree in Informatics Engineering with academic exposure to cybersecurity, data protection, and artificial intelligence."
+    "Risko reviews and improves Jenkins pipelines, Ansible playbooks, VMware workflows, Kubernetes deployments, monitoring platforms, and cloud infrastructure across Google Cloud Platform and Alibaba Cloud.",
+    "His work connects reliability engineering, security hardening, vulnerability assessment, observability, and automation quality. He is pursuing a Master's Degree in Informatics Engineering with academic exposure to cybersecurity, data protection, and artificial intelligence."
   ],
   highlights: [
     {
       title: "Automation Governance",
       description:
-        "Reviews Jenkins, Groovy, Python, Bash, and Ansible workflows before production execution to reduce operational risk."
+        "Reviews Jenkins, Groovy, Python, Bash, and Ansible workflows before release to reduce change risk and improve repeatability."
     },
     {
       title: "Cloud-Native Delivery",
       description:
-        "Designs CI/CD and GitOps workflows with Jenkins, ArgoCD, Kubernetes, GKE, Docker, Helm, and cloud platforms."
+        "Builds CI/CD and GitOps delivery across Jenkins, ArgoCD, Kubernetes, GKE, Docker, Helm, and cloud services."
     },
     {
-      title: "Security by Operation",
+      title: "Operational Security",
       description:
-        "Builds practical hardening, access protection, vulnerability scanning, WAF, Cloud Armor, and Vault-aware automation."
+        "Turns hardening, access protection, scanning, WAF, Cloud Armor, and Vault practices into usable delivery controls."
     },
     {
       title: "Observability & Cost",
       description:
-        "Uses Prometheus, Grafana, and Google Cloud Monitoring to improve visibility, response, and cost efficiency."
+        "Uses Prometheus, Grafana, and Google Cloud Monitoring to improve signal quality, incident response, and cloud cost discipline."
     }
   ]
 };
 
 export const competencies = [
   "Infrastructure Automation & Provisioning",
-  "CI/CD Architecture, Release Automation & Deployment",
-  "DevSecOps Integration, Security Hardening & Vulnerability Assessment",
+  "CI/CD Architecture & Release Engineering",
+  "DevSecOps Controls & Vulnerability Assessment",
   "VMware and Ansible Automation Review",
-  "Kubernetes, Container Platform & GitOps-based Deployment",
+  "Kubernetes, Containers & GitOps Deployment",
   "Cloud Operations on GCP and Alibaba Cloud",
-  "Monitoring, Observability and Incident Troubleshooting",
-  "Python, Bash and Groovy Automation Scripting",
-  "Technical Review, Mentoring and Cross-Team Collaboration",
-  "AI-driven Security Analysis and Secure Automation"
+  "Monitoring, Observability & Incident Response",
+  "Python, Bash & Groovy Automation",
+  "Technical Review, Mentoring & Cross-Team Delivery",
+  "AI-assisted Security Analysis"
 ];
 
 export const skills = [
@@ -122,58 +122,76 @@ export const skills = [
 
 export const projects = [
   {
-    title: "Infrastructure Provisioning Automation Review",
+    title: "Network Automation Provisioning",
     company: "PT. Bank Danamon Indonesia Tbk",
     description:
-      "Reviewed Jenkins, Ansible, Python, Groovy, and Bash automation workflows for VMware-based provisioning.",
-    stack: ["Jenkins", "Ansible", "VMware", "Python", "Groovy", "Bash"],
+      "Built automation support for network operations provisioning workflows across F5 and Infoblox devices.",
+    stack: ["F5", "Infoblox", "Network Automation", "Python", "API", "Provisioning"],
     impact:
-      "Improved production readiness, reduced execution risk, strengthened validation logic, and supported safer automation execution."
+      "Helped network teams reduce manual operational steps, standardize request execution, and improve review readiness before changes."
   },
   {
-    title: "Security Hardening Automation",
+    title: "VMware Provisioning Automation Review",
     company: "PT. Bank Danamon Indonesia Tbk",
     description:
-      "Collaborated with infrastructure and hardening teams to develop automation workflows for server hardening and vulnerability assessment.",
+      "Reviewed Jenkins, Ansible, Python, Groovy, and Bash workflows for VMware-based infrastructure provisioning.",
+    stack: ["Jenkins", "Ansible", "VMware", "Python", "Groovy", "Bash"],
+    impact:
+      "Strengthened validation, reduced change risk, and improved confidence before production execution."
+  },
+  {
+    title: "Server Hardening & Vulnerability Automation",
+    company: "PT. Bank Danamon Indonesia Tbk",
+    description:
+      "Partnered with infrastructure and hardening teams to automate server baseline checks and vulnerability assessment tasks.",
     stack: ["Ansible", "Linux", "Hardening", "Vulnerability Assessment"],
     impact:
-      "Improved security posture through repeatable hardening workflows and clearer operational review before execution."
+      "Made hardening work more repeatable, easier to review, and better aligned with operational security expectations."
   },
   {
     title: "Cloud Monitoring & Cost Optimization",
     company: "PT. Jaya Agung Teknologi",
     description:
-      "Integrated Grafana with Google Cloud Monitoring and reviewed monitoring tool usage and cloud resource consumption.",
+      "Integrated Grafana with Google Cloud Monitoring and reviewed monitoring usage against cloud resource consumption.",
     stack: ["GCP", "Grafana", "Prometheus", "Cloud Monitoring"],
     impact:
-      "Reduced redundant monitoring tooling and created a centralized observability datasource for better visibility and cost efficiency."
+      "Reduced redundant tooling and created a centralized observability source for better visibility and cost discipline."
   },
   {
-    title: "Kubernetes & CI/CD Modernization",
+    title: "Kubernetes & GitOps Modernization",
     company: "PT. Jaya Agung Teknologi",
     description:
-      "Designed and maintained Jenkins and ArgoCD workflows to support Kubernetes workloads across cloud environments.",
+      "Designed and maintained Jenkins and ArgoCD workflows for Kubernetes workloads across cloud environments.",
     stack: ["Jenkins", "ArgoCD", "Kubernetes", "GKE", "Helm"],
     impact:
-      "Improved deployment consistency, release reliability, and cloud-native operational flexibility."
+      "Improved deployment consistency, release confidence, and cloud-native operational flexibility."
   },
   {
-    title: "Application Containerization Standardization",
+    title: "Application Containerization Standards",
     company: "Indosoft IT Konsultan",
     description:
-      "Migrated traditional server-based deployments into Docker-based containerized delivery patterns.",
+      "Migrated traditional server-based deployments into Docker-based delivery patterns.",
     stack: ["Docker", "Docker Compose", "Linux", "CI/CD"],
     impact:
-      "Reduced dependency conflicts, improved environment consistency, simplified release packaging, and strengthened rollback capability."
+      "Reduced dependency drift, improved environment consistency, simplified release packaging, and strengthened rollback options."
   },
   {
-    title: "Cloud-Native Migration to GKE",
+    title: "Multi-Site Network & POS Implementation",
+    company: "Indosoft IT Konsultan",
+    description:
+      "Handled network infrastructure and POS software implementation for hotel and entertainment business clients across multiple locations.",
+    stack: ["Network Setup", "POS Software", "System Configuration", "Troubleshooting", "Client Handover"],
+    impact:
+      "Improved rollout consistency through structured setup, user coordination, troubleshooting, and operational handover."
+  },
+  {
+    title: "GKE Migration & Platform Delivery",
     company: "PT. Jaya Agung Teknologi",
     description:
-      "Led migration of application workloads from on-premises infrastructure to Google Kubernetes Engine.",
+      "Led application workload migration from on-premises infrastructure to Google Kubernetes Engine.",
     stack: ["GKE", "GCP", "Kubernetes", "CI/CD"],
     impact:
-      "Enabled a scalable, consistent, cloud-native deployment model and improved reliability of production delivery."
+      "Enabled a scalable deployment model with stronger platform consistency and production reliability."
   }
 ];
 
@@ -183,18 +201,30 @@ export const journey = [
     role: "Senior DevOps Engineer",
     year: "Dec 2023 - Present",
     description:
-      "Technical leadership for infrastructure provisioning automation, network automation, Jenkins job review, Ansible validation, VMware workflow risk assessment, server hardening automation, and Python-based internal tooling.",
+      "Leads technical review for infrastructure and network provisioning, Jenkins jobs, Ansible validation, VMware workflow risk assessment, server hardening, and Python internal tooling.",
+    details: [
+      "Reviews Jenkins jobs, Groovy scripts, Python, Bash, and Ansible playbooks before production execution to reduce automation failure risk.",
+      "Supports network automation provisioning for operational workflows involving F5 and Infoblox devices.",
+      "Assesses VMware and Ansible integration flows, including storage allocation, execution validation, and infrastructure impact review.",
+      "Partners with infrastructure and hardening teams to improve server hardening automation, logging, error handling, and operational safety."
+    ],
     focus:
-      "Infrastructure & Network Automation, VMware Automation, Jenkins Review, Ansible Validation, Hardening Automation"
+      "Infrastructure & Network Provisioning, VMware Review, Jenkins Governance, Ansible Validation, Server Hardening"
   },
   {
     company: "PT. Jaya Agung Teknologi",
     role: "Senior DevOps Engineer",
     year: "Feb 2022 - Dec 2023",
     description:
-      "Led CI/CD delivery workflows using Jenkins and ArgoCD, maintained GCP infrastructure, implemented observability with Prometheus, Grafana, and Google Cloud Monitoring, executed Kubernetes workload migrations, optimized cloud costs, and mentored junior engineers.",
+      "Owned Jenkins and ArgoCD delivery workflows, maintained GCP infrastructure, implemented Prometheus/Grafana observability, migrated Kubernetes workloads, optimized cloud costs, and mentored junior engineers.",
+    details: [
+      "Designed and maintained CI/CD workflows with Jenkins and ArgoCD for cloud-native application delivery.",
+      "Operated GCP and GKE environments, including Kubernetes workload migration from on-premises infrastructure.",
+      "Integrated Prometheus, Grafana, and Google Cloud Monitoring to improve observability and operational response.",
+      "Reviewed cloud resource usage, reduced redundant monitoring tooling, strengthened access protection, and mentored junior engineers."
+    ],
     focus:
-      "Cloud Infrastructure, Kubernetes Operations, GitOps, GCP, Observability, Cost Optimization, Production Security"
+      "Cloud Infrastructure, Kubernetes Operations, GitOps, GCP, Observability, Cost Optimization"
   },
   {
     company: "Inwinteck Singapore",
@@ -202,6 +232,10 @@ export const journey = [
     year: "Mar 2019 - Dec 2023",
     description:
       "Delivered on-site enterprise server hardware support, failed component replacement, validation, client coordination, and technical reporting.",
+    details: [
+      "Handled enterprise server service restoration through hardware diagnosis, FRU replacement, and post-replacement validation.",
+      "Coordinated with clients and remote technical teams to complete field activities with clear reporting."
+    ],
     focus: "Enterprise Server Support, Hardware Replacement, Service Restoration, Client Communication"
   },
   {
@@ -209,9 +243,28 @@ export const journey = [
     role: "DevOps Engineer & Backend Developer",
     year: "Nov 2018 - Jan 2022",
     description:
-      "Managed 20+ Ubuntu Linux servers, designed Jenkins and GitLab CI pipelines, operated Alibaba Cloud and DigitalOcean infrastructure, developed REST APIs with Django Rest Framework, configured VPN connectivity, and built Python/Bash automation.",
+      "Managed 20+ Ubuntu Linux servers, designed Jenkins and GitLab CI pipelines, operated Alibaba Cloud and DigitalOcean infrastructure, developed Django REST APIs, configured VPN connectivity, and built Python/Bash automation.",
+    details: [
+      "Administered Ubuntu production servers, web infrastructure, databases, middleware, and routine operational support.",
+      "Built Jenkins and GitLab CI pipelines to standardize build, deployment, and release workflows.",
+      "Operated Alibaba Cloud and DigitalOcean infrastructure to support scalable application environments.",
+      "Developed Django REST APIs, including payment gateway integration for transaction processing.",
+      "Used Docker Compose, MikroTik VPN configuration, and Python/Bash automation to improve environment consistency."
+    ],
     focus:
       "Linux Operations, CI/CD, Cloud Infrastructure, Backend API Development, Docker Compose, VPN, Production Support"
+  },
+  {
+    company: "PT. Semen Padang - Aceh Area",
+    role: "Warehouse Lead",
+    year: "Aug 2017 - Jun 2018",
+    description:
+      "Coordinated warehouse-to-customer shipment operations, inventory scheduling, stock control, monthly audit activities, and weekly reporting for area management.",
+    details: [
+      "Managed shipment coordination, inventory accuracy, and operational reporting in a structured field operations environment.",
+      "Built early leadership experience in coordination, documentation, audit discipline, and cross-functional execution."
+    ],
+    focus: "Operations Coordination, Inventory Control, Stock Audit, Reporting, Team Coordination"
   },
   {
     company: "PT. Melody Indah Swara",
@@ -219,6 +272,10 @@ export const journey = [
     year: "Jan 2015 - Jul 2017",
     description:
       "Monitored system performance, automated administration tasks with Bash, administered MikroTik networking, maintained Ubuntu servers and MySQL databases, and handled endpoint security, backup, restore, and recovery.",
+    details: [
+      "Maintained Linux servers, MikroTik networking, MySQL databases, backup processes, and endpoint security operations.",
+      "Automated recurring administration tasks with Bash to reduce manual operational work."
+    ],
     focus: "IT Operations, Linux Administration, Bash Automation, MikroTik, MySQL, Backup & Recovery"
   },
   {
@@ -227,6 +284,10 @@ export const journey = [
     year: "Jan 2011 - Jan 2015",
     description:
       "Managed internal IT infrastructure operations, endpoint support, network cabling, MikroTik connectivity, troubleshooting, backup and recovery, hardware maintenance, and audio streaming infrastructure.",
+    details: [
+      "Supported internal users, network connectivity, hardware maintenance, backup and recovery, and daily infrastructure troubleshooting.",
+      "Maintained MikroTik connectivity and audio streaming infrastructure for operational continuity."
+    ],
     focus: "System Administration, Network Operations, Endpoint Support, Backup & Recovery, Hardware Support"
   }
 ];
@@ -235,17 +296,17 @@ export const achievements = [
   {
     title: "Finalist - International AI Hackathon, PPATK",
     description:
-      "Participated as a finalist in an international AI hackathon focused on AI-based problem solving, analytical innovation, and technology-driven solutions."
+      "Reached finalist stage in an international AI hackathon, applying analytical thinking and applied AI concepts to real problem statements."
   },
   {
     title: "Speaker - Artificial Intelligence Awareness Session",
     description:
-      "Introduced AI concepts, technology trends, and practical use cases to vocational school students at SMK Sasmita Jaya 1."
+      "Presented AI fundamentals, technology trends, and practical use cases to vocational students at SMK Sasmita Jaya 1."
   },
   {
     title: "Postgraduate Academic Development",
     description:
-      "Active in postgraduate technology activities with strong interests in cybersecurity, DevSecOps, artificial intelligence, secure automation, and data protection."
+      "Developing academic depth in cybersecurity, DevSecOps, artificial intelligence, applied security, and data protection."
   }
 ];
 
@@ -255,7 +316,7 @@ export const education = [
     program: "Master's Degree in Informatics Engineering",
     year: "2024 - Present",
     detail:
-      "Academic interests in cybersecurity, DevSecOps, artificial intelligence, secure automation, and data protection. Thesis direction focuses on information security and DevSecOps Automation Framework."
+      "Postgraduate focus on cybersecurity, DevSecOps, artificial intelligence, and data protection. Thesis direction: information security controls for DevSecOps delivery."
   },
   {
     school: "STMIK GICI Business School Batam",

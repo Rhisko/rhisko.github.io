@@ -49,7 +49,7 @@ function Navbar() {
           </span>
           <span>
             <span className="block text-base font-black leading-5">{profile.name}</span>
-            <span className="muted-label block text-xs font-bold uppercase">Senior DevOps</span>
+            <span className="muted-label block text-xs font-bold uppercase">Senior DevOps Engineer</span>
           </span>
         </a>
 
@@ -105,7 +105,7 @@ function Hero() {
 
           <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
             {profile.name}
-            <span className="hero-accent block">secures and automates production delivery.</span>
+            <span className="hero-accent block">builds secure automation for production teams.</span>
           </h1>
 
           <p className="dark-copy mt-6 max-w-3xl text-xl font-semibold leading-8 md:text-2xl">
@@ -134,7 +134,7 @@ function Hero() {
               <p className="eyebrow eyebrow-dark">Keep Moving Forward</p>
               <h2 className="mt-3 text-3xl font-black text-white">{profile.role}</h2>
               <p className="dark-copy mt-3 text-sm leading-7">
-                Over 8 years of experience specializing in DevOps, backed by a 10+ year career in the IT industry.
+                8+ years in DevOps, shaped by more than a decade across IT operations, cloud infrastructure, and platform delivery.
               </p>
             </div>
           </div>
@@ -168,8 +168,8 @@ function Hero() {
           <div className="mt-7 border-t border-white/10 pt-6">
             <p className="dark-muted text-sm font-bold uppercase">Boardroom summary</p>
             <p className="dark-copy mt-3 text-sm leading-7">
-              Risko supports teams that need automation quality, production safety, CI/CD maturity, Kubernetes operations,
-              cloud visibility, and practical DevSecOps controls.
+              Risko helps teams turn automation into controlled, observable, and secure delivery across CI/CD, Kubernetes,
+              cloud platforms, and infrastructure operations.
             </p>
           </div>
         </aside>
@@ -216,8 +216,8 @@ function ProfessionalFocus() {
       <div className="mx-auto max-w-7xl px-5">
         <SectionHeader
           eyebrow="Professional Focus"
-          title="Enterprise DevOps capability for secure and reliable delivery."
-          subtitle="A concise view of the operating strengths Risko brings to cloud platforms, automation governance, DevSecOps, and production engineering."
+          title="Enterprise DevOps capability for reliable, secure delivery."
+          subtitle="A concise view of how Risko improves platform operations, automation review, DevSecOps controls, and cloud delivery."
         />
         <div className="grid gap-5 md:grid-cols-2">
           {professionalFocus.map((item) => (
@@ -241,15 +241,15 @@ function Expertise() {
       <div className="mx-auto max-w-7xl px-5">
         <SectionHeader
           eyebrow="Expertise"
-          title="Core strengths across automation, platforms, and security."
-          subtitle="A practical engineering stack for infrastructure automation, cloud operations, platform reliability, and secure release delivery."
+          title="Core strengths across platforms, automation, and operational security."
+          subtitle="Hands-on stack for infrastructure review, CI/CD, Kubernetes, cloud reliability, observability, and release operations."
         />
         <div className="grid min-w-0 gap-4 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="command-panel min-w-0">
             <Terminal className="text-[color:var(--accent)]" size={28} />
             <pre className="dark-copy mt-5 max-w-full whitespace-pre-wrap break-words text-xs leading-6 sm:text-sm sm:leading-7">
 {`core_focus:
-  automation_review: Jenkins, Ansible, Python, Bash, Groovy
+  risk_review: Jenkins, Ansible, Python, Bash, Groovy
   platform: GCP, Alibaba Cloud, VMware, Kubernetes, GKE
   security: hardening, WAF, Vault, Trivy, Semgrep, SonarQube
   delivery: CI/CD, GitOps, ArgoCD, release reliability`}
@@ -300,7 +300,7 @@ function CompetencyBand() {
 function Impact() {
   return (
     <section id="impact" className="section-wrap muted-section">
-      <SectionHeader eyebrow="Impact" title="Selected delivery stories with production relevance." />
+      <SectionHeader eyebrow="Impact" title="Selected DevOps work across production environments." />
       <div className="grid gap-5 lg:grid-cols-3">
         {projects.map((project) => (
           <article key={project.title} className="project-card">
@@ -327,7 +327,7 @@ function Impact() {
 function Experience() {
   return (
     <section id="experience" className="section-wrap">
-      <SectionHeader eyebrow="Experience" title="Senior DevOps experience with banking, cloud, and infrastructure context." />
+      <SectionHeader eyebrow="Experience" title="Progression from infrastructure operations to senior DevOps leadership." />
       <div className="relative space-y-5">
         {journey.map((item) => (
           <article key={`${item.company}-${item.year}`} className="timeline-card">
@@ -339,6 +339,16 @@ function Experience() {
               <p className="date-badge">{item.year}</p>
             </div>
             <p className="mt-5 text-sm leading-7 text-slate-600">{item.description}</p>
+            {item.details?.length ? (
+              <ul className="mt-5 grid gap-2 text-sm leading-7 text-slate-600">
+                {item.details.map((detail) => (
+                  <li key={detail} className="flex gap-3">
+                    <CheckCircle2 className="mt-1 shrink-0 text-[color:var(--primary)]" size={16} />
+                    <span>{detail}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
             <p className="mt-4 text-sm leading-7 text-slate-700">
               <span className="font-black text-slate-950">Key Focus:</span> {item.focus}
             </p>
@@ -415,7 +425,7 @@ function EducationAndActivity() {
         </div>
 
         <div>
-          <SectionHeader eyebrow="Activities" title="AI, cybersecurity, and community-facing technology work." />
+          <SectionHeader eyebrow="Activities" title="Applied AI, cybersecurity learning, and technical community work." />
           <div className="space-y-4">
             {achievements.map((item) => (
               <article key={item.title} className="feature-card">
@@ -437,10 +447,10 @@ function Contact() {
       <div className="contact-panel">
         <div>
           <p className="eyebrow eyebrow-dark">Contact</p>
-          <h2 className="mt-3 text-3xl font-black text-white md:text-5xl">Ready for  DevOps and DevSecOps delivery.</h2>
+          <h2 className="mt-3 text-3xl font-black text-white md:text-5xl">Ready for DevOps and DevSecOps delivery.</h2>
           <p className="dark-copy mt-5 max-w-2xl leading-8">
-            Best fit: infrastructure automation, CI/CD modernization, Kubernetes operations, cloud platform reliability,
-            security hardening automation, observability, and production support maturity.
+            Best fit: regulated production environments that need stronger CI/CD, Kubernetes operations, cloud reliability,
+            observability, security hardening, and automation review.
           </p>
         </div>
 
