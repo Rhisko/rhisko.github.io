@@ -1,9 +1,9 @@
 export const profile = {
   name: "Risko",
-  role: "Senior DevOps Engineer | DevSecOps & AI-Assisted Security",
-  headline: "Secure automation, reliable platforms, and cloud delivery for production teams.",
+  role: "Senior DevOps Engineer | DevSecOps & Platform Reliability",
+  headline: "Cloud-native automation, CI/CD governance, and platform reliability for production teams.",
   tagline:
-    "Senior DevOps Engineer with 8+ years in platform automation, CI/CD engineering, cloud operations, Linux administration, Kubernetes, observability, and security-focused delivery. Backed by 10+ years across IT operations and postgraduate study in cybersecurity, data protection, and artificial intelligence.",
+    "Senior DevOps Engineer with 8+ years of experience across platform automation, CI/CD engineering, cloud operations, Kubernetes, observability, and security-focused delivery. Backed by 10+ years in IT operations and postgraduate study in cybersecurity, data protection, and artificial intelligence.",
   location: "Pamulang, Tangerang Selatan",
   phone: "+62 813 1688 8438",
   email: "risko.alexander@gmail.com",
@@ -16,9 +16,9 @@ export const profile = {
 
 export const metrics = [
   { value: "8+", label: "Years in DevOps" },
-  { value: "10+", label: "Years in IT Industry" },
-  { value: "GCP", label: "Cloud & GKE Delivery" },
-  { value: "DevSecOps", label: "Secure Delivery Focus" }
+  { value: "10+", label: "Years Across IT" },
+  { value: "GCP", label: "Cloud & GKE Platforms" },
+  { value: "DevSecOps", label: "Governance & Security" }
 ];
 
 export const professionalFocus = [
@@ -26,25 +26,29 @@ export const professionalFocus = [
     title: "Production Platform Leadership",
     value: "DevOps leadership for regulated and business-critical environments",
     detail:
-      "Turns delivery goals into reliable automation, disciplined technical review, and operational controls for environments where downtime and change risk matter."
+      "Turns delivery goals into reliable automation, disciplined technical review, and operational controls for environments where downtime and change risk matter.",
+    tools: ["Jenkins", "Kubernetes", "Google Cloud Platform", "Linux"]
   },
   {
     title: "Automation Risk Review",
     value: "Jenkins, Ansible, VMware, Python, Bash, and Groovy review",
     detail:
-      "Reviews workflows before execution to detect unsafe changes, strengthen validation, and keep provisioning repeatable."
+      "Reviews workflows before execution to detect unsafe changes, strengthen validation, and keep provisioning repeatable.",
+    tools: ["Jenkins", "Ansible", "VMware", "Python", "Bash", "Groovy"]
   },
   {
     title: "Cloud-Native Delivery",
     value: "GCP, GKE, Kubernetes, ArgoCD, observability, and cost control",
     detail:
-      "Builds and operates cloud-native delivery paths with GitOps, monitoring, platform guardrails, and cost-aware operations."
+      "Builds and operates cloud-native delivery paths with GitOps, monitoring, platform guardrails, and cost-aware operations.",
+    tools: ["Google Cloud Platform", "GKE", "Kubernetes", "ArgoCD", "Prometheus", "Grafana"]
   },
   {
     title: "Infrastructure Foundation",
     value: "Systems, networks, backup, and field support roots",
     detail:
-      "Grounded in Linux administration, enterprise hardware support, troubleshooting, and service recovery before progressing into senior platform engineering."
+      "Grounded in Linux administration, enterprise hardware support, troubleshooting, and service recovery before progressing into senior platform engineering.",
+    tools: ["Linux", "VMware", "MySQL", "NGINX", "Apache"]
   }
 ];
 

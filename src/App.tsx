@@ -46,10 +46,45 @@ import {
 
 const navItems = ["Profile", "Expertise", "Research", "Impact", "Experience", "Certificates", "Contact"];
 const assetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, "")}`;
+const simpleIconUrl = (slug: string, color: string) => `https://cdn.simpleicons.org/${slug}/${color.replace("#", "")}`;
 const phoneDigits = profile.phone.replace(/\D/g, "");
 const whatsappUrl = `https://wa.me/${phoneDigits}?text=${encodeURIComponent(
   "Halo Risko, saya tertarik berdiskusi tentang peluang DevOps / DevSecOps."
 )}`;
+const toolIcons: Record<string, string> = {
+  "Google Cloud Platform": simpleIconUrl("googlecloud", "#4285F4"),
+  "Alibaba Cloud": simpleIconUrl("alibabacloud", "#FF6A00"),
+  VMware: simpleIconUrl("vmware", "#607078"),
+  DigitalOcean: simpleIconUrl("digitalocean", "#0080FF"),
+  Kubernetes: simpleIconUrl("kubernetes", "#326CE5"),
+  GKE: simpleIconUrl("googlecloud", "#4285F4"),
+  Docker: simpleIconUrl("docker", "#2496ED"),
+  Helm: simpleIconUrl("helm", "#0F1689"),
+  ArgoCD: simpleIconUrl("argo", "#EF7B4D"),
+  Jenkins: simpleIconUrl("jenkins", "#D24939"),
+  "GitLab CI": simpleIconUrl("gitlab", "#FC6D26"),
+  Bitbucket: simpleIconUrl("bitbucket", "#0052CC"),
+  Ansible: simpleIconUrl("ansible", "#EE0000"),
+  Terraform: simpleIconUrl("terraform", "#844FBA"),
+  "HashiCorp Vault": simpleIconUrl("vault", "#FFEC6E"),
+  Trivy: simpleIconUrl("trivy", "#1904DA"),
+  Semgrep: simpleIconUrl("semgrep", "#FF4F00"),
+  SonarQube: simpleIconUrl("sonarqube", "#4E9BCD"),
+  Prometheus: simpleIconUrl("prometheus", "#E6522C"),
+  Grafana: simpleIconUrl("grafana", "#F46800"),
+  "Google Cloud Monitoring": simpleIconUrl("googlecloud", "#4285F4"),
+  Python: simpleIconUrl("python", "#3776AB"),
+  Bash: simpleIconUrl("gnubash", "#4EAA25"),
+  Groovy: simpleIconUrl("apachegroovy", "#4298B8"),
+  Go: simpleIconUrl("go", "#00ADD8"),
+  Linux: simpleIconUrl("linux", "#FCC624"),
+  NGINX: simpleIconUrl("nginx", "#009639"),
+  Apache: simpleIconUrl("apache", "#D22128"),
+  PostgreSQL: simpleIconUrl("postgresql", "#4169E1"),
+  MySQL: simpleIconUrl("mysql", "#4479A1"),
+  Redis: simpleIconUrl("redis", "#FF4438"),
+  RabbitMQ: simpleIconUrl("rabbitmq", "#FF6600")
+};
 const professionalLinks = [
   {
     label: "GitHub",
@@ -167,12 +202,12 @@ function Hero() {
         <div className="text-white">
           <div className="premium-pill mb-6">
             <Sparkles size={16} />
-            Senior DevOps Engineer | DevSecOps | AI-Assisted Security & Reliability
+            Senior DevOps Engineer | DevSecOps | Cloud Reliability
           </div>
 
           <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
             {profile.name}
-            <span className="hero-accent block">engineers secure automation for production platforms.</span>
+            <span className="hero-accent block">builds secure platforms for reliable delivery.</span>
           </h1>
 
           <p className="dark-copy mt-6 max-w-3xl text-xl font-semibold leading-8 md:text-2xl">
@@ -202,10 +237,11 @@ function Hero() {
               <img src={assetPath(profile.photoUrl)} alt="Risko profile" className="profile-photo" />
             </div>
             <div>
-              <p className="eyebrow eyebrow-dark">Executive Profile</p>
+              <p className="eyebrow eyebrow-dark">Keep Moving Forward & Lifelong Learning</p>
               <h2 className="mt-3 text-3xl font-black text-white">{profile.role}</h2>
               <p className="dark-copy mt-3 text-sm leading-7">
-                8+ years in DevOps, shaped by more than a decade across IT operations, cloud infrastructure, and production platform delivery.
+                8+ years delivering DevOps capability across CI/CD, cloud infrastructure, Kubernetes operations,
+                automation governance, and production reliability.
               </p>
             </div>
           </div>
@@ -247,10 +283,10 @@ function Hero() {
           </div>
 
           <div className="mt-7 border-t border-white/10 pt-6">
-            <p className="dark-muted text-sm font-bold uppercase">Executive Summary</p>
+            <p className="dark-muted text-sm font-bold uppercase">Summary</p>
             <p className="dark-copy mt-3 text-sm leading-7">
-              Risko helps engineering teams turn automation into controlled, observable, and secure delivery across CI/CD,
-              Kubernetes, cloud platforms, and infrastructure operations.
+              Risko strengthens production delivery by combining automation governance, cloud operations, CI/CD discipline,
+              observability, and DevSecOps controls across Kubernetes and infrastructure platforms.
             </p>
           </div>
         </aside>
@@ -303,7 +339,22 @@ function ProfessionalFocus() {
         <div className="grid gap-5 md:grid-cols-2">
           {professionalFocus.map((item) => (
             <article key={item.title} className="analysis-card">
-              <p className="card-eyebrow">{item.title}</p>
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <p className="card-eyebrow">{item.title}</p>
+                {item.tools?.length ? (
+                  <div className="focus-tool-icons" aria-label={`${item.title} tools`}>
+                    {item.tools.map((tool) => {
+                      const icon = toolIcons[tool];
+
+                      return icon ? (
+                        <span key={tool} className="focus-tool-icon" title={tool}>
+                          <img src={icon} alt="" loading="lazy" />
+                        </span>
+                      ) : null;
+                    })}
+                  </div>
+                ) : null}
+              </div>
               <h3 className="mt-3 text-xl font-black text-slate-950">{item.value}</h3>
               <p className="mt-3 text-sm leading-7 text-slate-600">{item.detail}</p>
             </article>
@@ -378,11 +429,20 @@ function Expertise() {
                   <Icon className="icon-primary" size={28} />
                   <h3 className="mt-4 text-lg font-black text-slate-950">{skill.category}</h3>
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {skill.items.map((item) => (
-                      <span key={item} className="tag">
-                        {item}
-                      </span>
-                    ))}
+                    {skill.items.map((item) => {
+                      const icon = toolIcons[item];
+
+                      return (
+                        <span key={item} className="tag tag-tool">
+                          {icon ? (
+                            <img src={icon} alt="" className="tag-tool-icon" loading="lazy" />
+                          ) : (
+                            <Code2 className="tag-tool-icon text-[color:var(--primary)]" aria-hidden="true" />
+                          )}
+                          <span>{item}</span>
+                        </span>
+                      );
+                    })}
                   </div>
                 </article>
               );
@@ -416,8 +476,8 @@ function ResearchDesign() {
     <section id="research" className="section-wrap bg-white">
       <SectionHeader
         eyebrow="Research Design"
-        title="Research designs for secure automation, OpenShift governance, and AI-assisted DevSecOps."
-        subtitle="Architecture artifacts showing how Risko approaches automation governance, review gates, deployment safety, auditability, and handover discipline."
+        title="Research-driven exploration of secure automation and platform governance."
+        subtitle="Architecture studies that reflect Risko's continuous exploration of OpenShift governance, AI-assisted DevSecOps, review gates, deployment safety, auditability, and operational handover."
       />
 
       <div className="grid gap-6">
