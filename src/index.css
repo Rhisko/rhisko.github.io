@@ -7,15 +7,17 @@
 }
 
 [data-theme="executive"] {
-  --primary: #0f6f86;
-  --primary-strong: #15596d;
+  --primary: #0e7490;
+  --primary-strong: #155e75;
   --primary-deep: #07111f;
-  --primary-mid: #102c42;
-  --accent: #d9a520;
-  --accent-soft: #fde68a;
-  --surface-muted: #f7f9fc;
-  --card-shadow: rgba(15, 23, 42, 0.045);
-  --hover-shadow: rgba(15, 89, 109, 0.1);
+  --primary-mid: #102a43;
+  --accent: #c9972e;
+  --accent-soft: #f8df8c;
+  --surface-muted: #f5f7fb;
+  --surface-card: #ffffff;
+  --line-soft: rgba(15, 23, 42, 0.09);
+  --card-shadow: rgba(15, 23, 42, 0.06);
+  --hover-shadow: rgba(14, 116, 144, 0.16);
 }
 
 [data-theme="emerald"] {
@@ -26,6 +28,8 @@
   --accent: #a3e635;
   --accent-soft: #ecfccb;
   --surface-muted: #f3f8f5;
+  --surface-card: #ffffff;
+  --line-soft: rgba(6, 95, 70, 0.1);
   --card-shadow: rgba(6, 95, 70, 0.07);
   --hover-shadow: rgba(4, 120, 87, 0.15);
 }
@@ -38,6 +42,8 @@
   --accent: #38bdf8;
   --accent-soft: #e0f2fe;
   --surface-muted: #f7f7f8;
+  --surface-card: #ffffff;
+  --line-soft: rgba(15, 23, 42, 0.1);
   --card-shadow: rgba(15, 23, 42, 0.08);
   --hover-shadow: rgba(56, 189, 248, 0.13);
 }
@@ -50,6 +56,8 @@
   --accent: #22d3ee;
   --accent-soft: #cffafe;
   --surface-muted: #f6f6ff;
+  --surface-card: #ffffff;
+  --line-soft: rgba(49, 46, 129, 0.1);
   --card-shadow: rgba(49, 46, 129, 0.07);
   --hover-shadow: rgba(79, 70, 229, 0.14);
 }
@@ -61,7 +69,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: #ffffff;
+  background: #f5f7fb;
   color: #0f172a;
   font-family: Inter, system-ui, sans-serif;
 }
@@ -126,20 +134,42 @@ body:has([data-theme="indigo"]) {
 
   .brand-mark {
     @apply flex h-10 w-10 items-center justify-center rounded-lg shadow-lg;
-    background: var(--primary-deep);
+    background: linear-gradient(135deg, var(--primary-deep), var(--primary-strong));
     color: var(--accent);
+    box-shadow: 0 16px 34px color-mix(in srgb, var(--primary-deep) 20%, transparent);
   }
 
   .nav-link {
-    @apply text-sm font-bold text-slate-600 transition;
+    @apply rounded-md px-2 py-2 text-sm font-bold text-slate-600 transition;
   }
 
   .nav-link:hover {
+    background: color-mix(in srgb, var(--primary) 7%, white);
     color: var(--primary);
   }
 
   .nav-shell {
-    @apply fixed top-0 z-50 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-xl;
+    @apply fixed top-0 z-50 w-full border-b bg-white/90 backdrop-blur-xl;
+    border-color: var(--line-soft);
+    box-shadow: 0 14px 44px rgba(15, 23, 42, 0.055);
+  }
+
+  .mobile-menu-button {
+    @apply inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border bg-white text-slate-950 shadow-lg shadow-slate-950/10 transition duration-200 hover:-translate-y-0.5 hover:bg-slate-50;
+    border-color: var(--line-soft);
+  }
+
+  .mobile-nav-panel {
+    @apply border-t bg-white/95 shadow-xl shadow-slate-950/10 backdrop-blur-xl;
+    border-color: var(--line-soft);
+  }
+
+  .mobile-nav-link {
+    @apply rounded-lg px-4 py-3 text-sm font-black text-slate-700 transition hover:bg-slate-100;
+  }
+
+  .mobile-nav-link:hover {
+    color: var(--primary);
   }
 
   .muted-label {
@@ -153,28 +183,28 @@ body:has([data-theme="indigo"]) {
 
   .hero-bg {
     background:
-      radial-gradient(circle at 80% 16%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 30%),
-      linear-gradient(115deg, var(--primary-deep) 0%, var(--primary-mid) 52%, var(--primary-strong) 100%);
+      linear-gradient(155deg, rgba(255, 255, 255, 0.08), transparent 28%),
+      linear-gradient(115deg, var(--primary-deep) 0%, var(--primary-mid) 50%, var(--primary-strong) 100%);
   }
 
   .dark-section {
-    background: var(--primary-deep);
+    background: linear-gradient(135deg, var(--primary-deep), var(--primary-mid) 66%, var(--primary-strong));
   }
 
   .premium-pill {
-    @apply inline-flex items-center gap-2 rounded-md bg-white/10 px-4 py-2 text-sm font-bold backdrop-blur;
-    border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
+    @apply inline-flex items-center gap-2 rounded-md bg-white/10 px-4 py-2 text-sm font-bold shadow-lg shadow-slate-950/10 backdrop-blur;
+    border: 1px solid color-mix(in srgb, var(--accent) 34%, transparent);
     color: var(--accent-soft);
   }
 
   .btn-primary {
     @apply inline-flex items-center justify-center rounded-lg px-5 py-3 text-sm font-black text-slate-950 shadow-lg transition duration-300 hover:-translate-y-0.5;
-    background: var(--accent);
-    box-shadow: 0 16px 30px color-mix(in srgb, var(--accent) 18%, transparent);
+    background: linear-gradient(135deg, var(--accent-soft), var(--accent) 54%, #b98018);
+    box-shadow: 0 16px 30px color-mix(in srgb, var(--accent) 24%, transparent);
   }
 
   .btn-primary:hover {
-    background: color-mix(in srgb, var(--accent) 88%, white);
+    background: linear-gradient(135deg, #fff2b5, var(--accent) 58%, #b98018);
   }
 
   .btn-ghost {
@@ -183,11 +213,12 @@ body:has([data-theme="indigo"]) {
 
   .btn-light {
     @apply inline-flex min-h-[46px] items-center justify-center rounded-lg border border-white/80 bg-white px-5 py-3 text-sm font-black text-slate-950 shadow-lg shadow-slate-950/10 transition duration-300 hover:-translate-y-0.5 hover:bg-slate-50;
+    box-shadow: 0 16px 34px rgba(15, 23, 42, 0.13);
   }
 
   .btn-whatsapp {
     @apply inline-flex min-h-[46px] items-center justify-center rounded-lg px-5 py-3 text-sm font-black text-slate-950 shadow-lg transition duration-300 hover:-translate-y-0.5;
-    background: linear-gradient(135deg, #fde68a 0%, var(--accent) 42%, #f2a900 100%);
+    background: linear-gradient(135deg, var(--accent-soft) 0%, var(--accent) 46%, #b98018 100%);
     box-shadow: 0 16px 32px color-mix(in srgb, var(--accent) 25%, transparent);
   }
 
@@ -198,9 +229,8 @@ body:has([data-theme="indigo"]) {
 
   .profile-frame {
     @apply relative overflow-hidden rounded-lg p-2 shadow-2xl shadow-slate-950/25;
-    border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent) 34%, transparent);
     background:
-      radial-gradient(circle at 18% 12%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 30%),
       linear-gradient(145deg, color-mix(in srgb, var(--primary) 22%, white), color-mix(in srgb, var(--primary-deep) 80%, black));
   }
 
@@ -257,7 +287,9 @@ body:has([data-theme="indigo"]) {
   .analysis-card,
   .resource-card,
   .research-card {
-    @apply min-w-0 rounded-lg border border-slate-200 bg-white p-5 transition duration-300 hover:-translate-y-0.5 sm:p-6;
+    @apply min-w-0 rounded-lg border p-5 transition duration-300 hover:-translate-y-0.5 sm:p-6;
+    background: var(--surface-card);
+    border-color: var(--line-soft);
     box-shadow: 0 18px 46px var(--card-shadow);
   }
 
@@ -350,7 +382,7 @@ body:has([data-theme="indigo"]) {
     @apply relative overflow-hidden;
     border-color: color-mix(in srgb, var(--accent) 56%, white);
     background:
-      linear-gradient(90deg, color-mix(in srgb, var(--accent) 9%, white), #ffffff 34%),
+      linear-gradient(90deg, color-mix(in srgb, var(--accent) 11%, white), #ffffff 38%),
       #ffffff;
     box-shadow: 0 24px 70px color-mix(in srgb, var(--accent) 15%, transparent);
   }
@@ -394,7 +426,9 @@ body:has([data-theme="indigo"]) {
 
   .contact-panel {
     @apply grid gap-8 rounded-lg p-8 shadow-2xl shadow-slate-950/15 md:p-12 lg:grid-cols-[1fr_0.8fr] lg:items-center;
-    background: linear-gradient(135deg, var(--primary-deep), var(--primary-mid) 55%, var(--primary-strong));
+    background:
+      linear-gradient(155deg, rgba(255, 255, 255, 0.08), transparent 30%),
+      linear-gradient(135deg, var(--primary-deep), var(--primary-mid) 55%, var(--primary-strong));
   }
 
   .contact-action {
@@ -403,6 +437,13 @@ body:has([data-theme="indigo"]) {
 
   .contact-action:hover {
     border-color: color-mix(in srgb, var(--accent) 62%, transparent);
+  }
+
+  .site-footer {
+    @apply text-white;
+    background:
+      linear-gradient(155deg, rgba(255, 255, 255, 0.06), transparent 34%),
+      linear-gradient(135deg, var(--primary-deep), var(--primary-mid) 62%, #0b3b4a);
   }
 
   .card-eyebrow {

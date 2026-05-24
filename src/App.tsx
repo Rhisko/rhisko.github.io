@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   ArrowUp,
   ArrowUpRight,
@@ -17,11 +18,13 @@ import {
   LayoutDashboard,
   Mail,
   MapPin,
+  Menu,
   Phone,
   ShieldCheck,
   Sparkles,
   Terminal,
-  Workflow
+  Workflow,
+  X
 } from "lucide-react";
 
 import { activeTheme } from "./config/theme";
@@ -51,18 +54,20 @@ const professionalLinks = [
   {
     label: "GitHub",
     href: profile.github,
-    description: "Code, portfolio source, and engineering work samples.",
+    description: "Source code, portfolio work, and selected engineering samples.",
     icon: GitBranch
   },
   {
     label: "Technical Writing",
     href: profile.technicalWriting,
-    description: "Technical notes, articles, and engineering write-ups.",
+    description: "Technical articles, implementation notes, and engineering write-ups.",
     icon: FileText
   }
 ].filter((link) => Boolean(link.href));
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="nav-shell">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
@@ -84,11 +89,50 @@ function Navbar() {
           ))}
         </div>
 
-        <a href={assetPath(profile.cvUrl)} target="_blank" rel="noreferrer" className="btn-primary hidden md:inline-flex">
-          View CV
-          <Eye className="ml-2" size={17} />
-        </a>
+        <div className="flex items-center gap-3">
+          <a href={assetPath(profile.cvUrl)} target="_blank" rel="noreferrer" className="btn-primary hidden lg:inline-flex">
+            View CV
+            <Eye className="ml-2" size={17} />
+          </a>
+          <button
+            type="button"
+            className="mobile-menu-button lg:hidden"
+            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setIsMenuOpen((current) => !current)}
+          >
+            {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </nav>
+
+      {isMenuOpen ? (
+        <div id="mobile-navigation" className="mobile-nav-panel lg:hidden">
+          <div className="mx-auto grid max-w-7xl gap-2 px-5 py-4">
+            {navItems.map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="mobile-nav-link"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item}
+              </a>
+            ))}
+            <a
+              href={assetPath(profile.cvUrl)}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-primary mt-2 w-full"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              View CV
+              <Eye className="ml-2" size={17} />
+            </a>
+          </div>
+        </div>
+      ) : null}
     </header>
   );
 }
@@ -123,12 +167,12 @@ function Hero() {
         <div className="text-white">
           <div className="premium-pill mb-6">
             <Sparkles size={16} />
-            Senior DevOps Engineer | DevSecOps | AI Enthusiast for Security and Reliability
+            Senior DevOps Engineer | DevSecOps | AI-Assisted Security & Reliability
           </div>
 
           <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
             {profile.name}
-            <span className="hero-accent block">builds secure automation for production teams.</span>
+            <span className="hero-accent block">engineers secure automation for production platforms.</span>
           </h1>
 
           <p className="dark-copy mt-6 max-w-3xl text-xl font-semibold leading-8 md:text-2xl">
@@ -158,10 +202,10 @@ function Hero() {
               <img src={assetPath(profile.photoUrl)} alt="Risko profile" className="profile-photo" />
             </div>
             <div>
-              <p className="eyebrow eyebrow-dark">Keep Moving Forward</p>
+              <p className="eyebrow eyebrow-dark">Executive Profile</p>
               <h2 className="mt-3 text-3xl font-black text-white">{profile.role}</h2>
               <p className="dark-copy mt-3 text-sm leading-7">
-                8+ years in DevOps, shaped by more than a decade across IT operations, cloud infrastructure, and platform delivery.
+                8+ years in DevOps, shaped by more than a decade across IT operations, cloud infrastructure, and production platform delivery.
               </p>
             </div>
           </div>
@@ -203,10 +247,10 @@ function Hero() {
           </div>
 
           <div className="mt-7 border-t border-white/10 pt-6">
-            <p className="dark-muted text-sm font-bold uppercase">Boardroom summary</p>
+            <p className="dark-muted text-sm font-bold uppercase">Executive Summary</p>
             <p className="dark-copy mt-3 text-sm leading-7">
-              Risko helps teams turn automation into controlled, observable, and secure delivery across CI/CD, Kubernetes,
-              cloud platforms, and infrastructure operations.
+              Risko helps engineering teams turn automation into controlled, observable, and secure delivery across CI/CD,
+              Kubernetes, cloud platforms, and infrastructure operations.
             </p>
           </div>
         </aside>
@@ -254,7 +298,7 @@ function ProfessionalFocus() {
         <SectionHeader
           eyebrow="Professional Focus"
           title="Enterprise DevOps capability for reliable, secure delivery."
-          subtitle="A concise view of how Risko improves platform operations, automation review, DevSecOps controls, and cloud delivery."
+          subtitle="A focused view of how Risko strengthens platform operations, automation review, DevSecOps controls, and cloud delivery."
         />
         <div className="grid gap-5 md:grid-cols-2">
           {professionalFocus.map((item) => (
@@ -280,8 +324,8 @@ function ProfessionalLinks() {
       <div className="mx-auto max-w-7xl px-5">
         <SectionHeader
           eyebrow="Professional Links"
-          title="Source, writing, and external proof points."
-          subtitle="Quick access for recruiters and technical interviewers who want to review public engineering signals beyond the resume."
+          title="Engineering signals beyond the resume."
+          subtitle="Quick access for recruiters and technical interviewers who want to review public engineering work, source code, and external proof points."
         />
         <div className="grid gap-4 md:grid-cols-2">
           {professionalLinks.map((link) => {
@@ -312,7 +356,7 @@ function Expertise() {
         <SectionHeader
           eyebrow="Expertise"
           title="Core strengths across platforms, automation, and operational security."
-          subtitle="Hands-on stack for infrastructure review, CI/CD, Kubernetes, cloud reliability, observability, and release operations."
+          subtitle="A hands-on stack for infrastructure review, CI/CD, Kubernetes, cloud reliability, observability, and release operations."
         />
         <div className="grid min-w-0 gap-4 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="command-panel min-w-0">
@@ -373,7 +417,7 @@ function ResearchDesign() {
       <SectionHeader
         eyebrow="Research Design"
         title="Research designs for secure automation, OpenShift governance, and AI-assisted DevSecOps."
-        subtitle="A visual architecture artifact that shows how Risko thinks about automation governance, review gates, deployment safety, auditability, and handover discipline."
+        subtitle="Architecture artifacts showing how Risko approaches automation governance, review gates, deployment safety, auditability, and handover discipline."
       />
 
       <div className="grid gap-6">
@@ -428,7 +472,7 @@ function ResearchDesign() {
 function Impact() {
   return (
     <section id="impact" className="section-wrap muted-section">
-      <SectionHeader eyebrow="Impact" title="Selected DevOps work across production environments." />
+      <SectionHeader eyebrow="Impact" title="Selected DevOps outcomes across production environments." />
       <div className="grid gap-5 lg:grid-cols-3">
         {projects.map((project) => (
           <article key={project.title} className="project-card">
@@ -455,7 +499,7 @@ function Impact() {
 function Experience() {
   return (
     <section id="experience" className="section-wrap">
-      <SectionHeader eyebrow="Experience" title="Progression from infrastructure operations to senior DevOps leadership." />
+      <SectionHeader eyebrow="Experience" title="Career progression from infrastructure operations to senior DevOps leadership." />
       <div className="relative space-y-5">
         {journey.map((item) => {
           const isCurrentRole = item.year.includes("Present");
@@ -563,7 +607,7 @@ function EducationAndActivity() {
         </div>
 
         <div>
-          <SectionHeader eyebrow="Activities" title="Applied AI, cybersecurity learning, and technical community work." />
+          <SectionHeader eyebrow="Activities" title="Applied AI, cybersecurity learning, and technical community contribution." />
           <div className="space-y-4">
             {achievements.map((item) => (
               <article
@@ -620,10 +664,10 @@ function Contact() {
       <div className="contact-panel">
         <div>
           <p className="eyebrow eyebrow-dark">Contact</p>
-          <h2 className="mt-3 text-3xl font-black text-white md:text-5xl">Ready for DevOps and DevSecOps delivery.</h2>
+          <h2 className="mt-3 text-3xl font-black text-white md:text-5xl">Available for senior DevOps and DevSecOps delivery.</h2>
           <p className="dark-copy mt-5 max-w-2xl leading-8">
             Best fit: regulated production environments that need stronger CI/CD, Kubernetes operations, cloud reliability,
-            observability, security hardening, and automation review.
+            observability, security hardening, and automation governance.
           </p>
         </div>
 
@@ -673,13 +717,12 @@ function Contact() {
 
 function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-white px-5 py-8">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-sm text-slate-500 md:flex-row">
-        <div className="flex items-center gap-2 font-black text-slate-950">
-          <Cloud className="text-[color:var(--primary)]" size={24} />
-          <span>{profile.name} | Senior DevOps Engineer</span>
+    <footer className="site-footer">
+      <div className="mx-auto max-w-7xl px-5 py-6">
+        <div className="flex flex-col gap-2 text-center text-xs font-semibold text-slate-300 md:flex-row md:items-center md:justify-between md:text-left">
+          <p>© {new Date().getFullYear()} {profile.name}. All rights reserved.</p>
+          <p>Driven by continuous improvement, secure delivery, and production-grade reliability.</p>
         </div>
-        <p>© {new Date().getFullYear()} {profile.name} Lifelong Learners </p>
       </div>
     </footer>
   );
