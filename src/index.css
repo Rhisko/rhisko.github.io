@@ -181,6 +181,16 @@ body:has([data-theme="indigo"]) {
     @apply inline-flex items-center justify-center rounded-lg border border-white/25 bg-white/10 px-5 py-3 text-sm font-black text-white backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/20;
   }
 
+  .btn-light {
+    @apply inline-flex min-h-[46px] items-center justify-center rounded-lg border border-white/80 bg-white px-5 py-3 text-sm font-black text-slate-950 shadow-lg shadow-slate-950/10 transition duration-300 hover:-translate-y-0.5 hover:bg-slate-50;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex min-h-[46px] items-center justify-center rounded-lg px-5 py-3 text-sm font-black text-slate-950 shadow-lg transition duration-300 hover:-translate-y-0.5;
+    background: linear-gradient(135deg, #fde68a 0%, var(--accent) 42%, #f2a900 100%);
+    box-shadow: 0 16px 32px color-mix(in srgb, var(--accent) 25%, transparent);
+  }
+
   .executive-panel {
     @apply rounded-lg border border-white/10 p-6 shadow-2xl shadow-slate-950/25 backdrop-blur-xl md:p-8 lg:border-0 lg:p-0 lg:shadow-none lg:backdrop-blur-0;
     background: rgba(2, 6, 23, 0.28);
@@ -244,7 +254,9 @@ body:has([data-theme="indigo"]) {
   .skill-card,
   .project-card,
   .timeline-card,
-  .analysis-card {
+  .analysis-card,
+  .resource-card,
+  .research-card {
     @apply min-w-0 rounded-lg border border-slate-200 bg-white p-5 transition duration-300 hover:-translate-y-0.5 sm:p-6;
     box-shadow: 0 18px 46px var(--card-shadow);
   }
@@ -253,9 +265,100 @@ body:has([data-theme="indigo"]) {
   .skill-card:hover,
   .project-card:hover,
   .timeline-card:hover,
-  .analysis-card:hover {
+  .analysis-card:hover,
+  .resource-card:hover,
+  .research-card:hover {
     border-color: color-mix(in srgb, var(--primary) 28%, white);
     box-shadow: 0 22px 58px var(--hover-shadow);
+  }
+
+  .resource-card {
+    @apply flex items-start gap-4 no-underline;
+  }
+
+  .activity-card-featured {
+    @apply overflow-hidden;
+  }
+
+  .activity-certificate {
+    @apply mt-5 block overflow-hidden rounded-lg border border-slate-200 bg-slate-50 no-underline transition duration-300 hover:-translate-y-0.5;
+    box-shadow: 0 14px 34px var(--card-shadow);
+  }
+
+  .activity-certificate img {
+    @apply aspect-[4/3] w-full object-cover object-center;
+    filter: brightness(1.08) contrast(1.04) saturate(1.03);
+  }
+
+  .activity-certificate span {
+    @apply p-4;
+  }
+
+  .activity-gallery {
+    @apply mt-5 grid gap-3;
+  }
+
+  .activity-main-photo,
+  .activity-thumb {
+    @apply block overflow-hidden rounded-lg border border-slate-200 bg-slate-100;
+  }
+
+  .activity-main-photo {
+    @apply aspect-[16/9];
+  }
+
+  .activity-main-photo img,
+  .activity-thumb img {
+    @apply h-full w-full object-cover transition duration-500;
+    filter: brightness(1.12) contrast(1.05) saturate(1.06);
+  }
+
+  .activity-main-photo:hover img,
+  .activity-thumb:hover img {
+    transform: scale(1.035);
+  }
+
+  .activity-thumbnails {
+    @apply grid grid-cols-3 gap-3;
+  }
+
+  .activity-thumb {
+    @apply aspect-[4/3];
+  }
+
+  .research-card {
+    @apply grid gap-6 p-0 lg:grid-cols-[0.72fr_1.28fr] lg:items-stretch;
+  }
+
+  .research-copy {
+    @apply min-w-0 p-5 sm:p-7;
+  }
+
+  .research-preview {
+    @apply block min-h-[260px] overflow-hidden border-t border-slate-200 bg-slate-950 lg:border-l lg:border-t-0;
+  }
+
+  .research-image {
+    @apply h-full min-h-[260px] w-full object-cover object-left-top transition duration-500;
+  }
+
+  .research-preview:hover .research-image {
+    transform: scale(1.025);
+  }
+
+  .timeline-card-current {
+    @apply relative overflow-hidden;
+    border-color: color-mix(in srgb, var(--accent) 56%, white);
+    background:
+      linear-gradient(90deg, color-mix(in srgb, var(--accent) 9%, white), #ffffff 34%),
+      #ffffff;
+    box-shadow: 0 24px 70px color-mix(in srgb, var(--accent) 15%, transparent);
+  }
+
+  .timeline-card-current::before {
+    @apply absolute bottom-0 left-0 top-0 w-1.5;
+    content: "";
+    background: linear-gradient(180deg, var(--accent-soft), var(--accent), var(--primary));
   }
 
   .command-panel {
@@ -310,6 +413,17 @@ body:has([data-theme="indigo"]) {
   .date-badge {
     @apply w-fit rounded-md px-4 py-2 text-sm font-bold text-white;
     background: var(--primary-deep);
+  }
+
+  .date-badge-current {
+    @apply text-slate-950;
+    background: linear-gradient(135deg, #fde68a, var(--accent));
+    box-shadow: 0 12px 28px color-mix(in srgb, var(--accent) 20%, transparent);
+  }
+
+  .current-role-badge {
+    @apply inline-flex rounded-md px-3 py-1 text-xs font-black uppercase text-slate-950;
+    background: linear-gradient(135deg, #fde68a, var(--accent));
   }
 
   .scroll-top {

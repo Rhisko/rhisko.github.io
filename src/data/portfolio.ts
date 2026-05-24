@@ -8,6 +8,8 @@ export const profile = {
   phone: "+62 813 1688 8438",
   email: "risko.alexander@gmail.com",
   linkedin: "https://www.linkedin.com/in/risko-237416106",
+  github: "https://github.com/rhisko",
+  technicalWriting: "",
   cvUrl: "/cv.pdf",
   photoUrl: "/profile.jpeg"
 };
@@ -117,6 +119,51 @@ export const skills = [
   {
     category: "Database & Middleware",
     items: ["PostgreSQL", "MySQL", "Redis", "RabbitMQ", "NSQ"]
+  }
+];
+
+export const researchDesigns = [
+  {
+    title: "Infrastructure Automation Delivery Pipeline",
+    category: "Research Design | Platform-Agnostic Automation",
+    image: "/assets/Design/Infra_design_automation_1.png",
+    viewerUrl: "/design-infra-automation.html",
+    description:
+      "A current research design for a secure, auditable, reliable, and repeatable infrastructure automation delivery pipeline. The flow covers request intake, automated AI/LLM review, engineer approval, Terraform/Ansible deployment preparation, state locking, deployment validation, and Confluence-based handover.",
+    stack: ["Jira", "Jenkins", "Terraform", "Ansible", "Confluence", "OpenAI", "Claude", "DevSecOps"],
+    highlights: [
+      "Defines review gates before infrastructure changes reach production execution.",
+      "Combines AI-assisted review with engineer approval to reduce automation risk.",
+      "Documents audit trail, deployment status flow, Terraform state lock, and handover process."
+    ]
+  },
+  {
+    title: "OpenShift Platform Request Automation",
+    category: "Research Design | OpenShift Governance Automation",
+    image: "/assets/Design/Infra_design_automation_2.png",
+    viewerUrl: "/design-openshift-automation.html",
+    description:
+      "A current research design for automating OpenShift platform requests with controlled approvals, Jenkins validation, Git-based manifest generation, pull request review, Argo CD synchronization, and failure scenario handling.",
+    stack: ["Jira", "Jenkins", "Git", "GitHub", "GitLab", "Argo CD", "OpenShift", "RBAC", "PVC"],
+    highlights: [
+      "Covers namespace, quota/LimitRange, RBAC, and PVC request flows with manual approval gates.",
+      "Separates Git as desired state, Argo CD as deployment state, and OpenShift as runtime state.",
+      "Maps failure scenarios for Jenkins, Argo CD, Git, Jira, validation, and partial synchronization."
+    ]
+  },
+  {
+    title: "Intelligent DevSecOps Framework",
+    category: "Research Design | AI-Assisted DevSecOps",
+    image: "/assets/Design/Infra_design_automation_3.png",
+    viewerUrl: "/design-intelligent-devsecops.html",
+    description:
+      "A current research design for an AI-assisted DevSecOps framework that connects source control, Jenkins, linting, Semgrep SAST, container image build, Trivy scanning, SonarQube quality gates, LangChain advisory, human review, Kubernetes deployment, and audit trail storage.",
+    stack: ["GitHub", "Jenkins", "Semgrep", "Docker", "Trivy", "SonarQube", "LangChain", "Kubernetes", "Slack"],
+    highlights: [
+      "Combines automated validation, security scanning, AI advisory, and human approval before release.",
+      "Produces human-readable HTML analysis with risk level, root cause, impact, recommended fixes, and next actions.",
+      "Maintains audit artifacts across scan reports, AI advisory output, deployment logs, and release decisions."
+    ]
   }
 ];
 
@@ -296,12 +343,23 @@ export const achievements = [
   {
     title: "Finalist - International AI Hackathon, PPATK",
     description:
-      "Reached finalist stage in an international AI hackathon, applying analytical thinking and applied AI concepts to real problem statements."
+      "Reached finalist stage in TrackAML Hackathon 2.0 International, applying analytical thinking and applied AI concepts to real AML/CFT problem statements.",
+    certificate: {
+      title: "TrackAML Hackathon 2.0 International - Finalist Certificate",
+      issuer: "PPATK",
+      file: "/assets/Activity/trackaml-hackathon-finalist-certificate.jpg"
+    }
   },
   {
     title: "Speaker - Artificial Intelligence Awareness Session",
     description:
-      "Presented AI fundamentals, technology trends, and practical use cases to vocational students at SMK Sasmita Jaya 1."
+      "Presented AI fundamentals, technology trends, and practical use cases to vocational students at SMK Sasmita Jaya 1.",
+    images: [
+      "/assets/Activity/Pkm_1.jpeg",
+      "/assets/Activity/PKm_2.jpeg",
+      "/assets/Activity/Pkm_3.jpeg",
+      "/assets/Activity/Pkm_4.jpeg"
+    ]
   },
   {
     title: "Postgraduate Academic Development",
