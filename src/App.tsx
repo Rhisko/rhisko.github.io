@@ -123,7 +123,7 @@ function Hero() {
         <div className="text-white">
           <div className="premium-pill mb-6">
             <Sparkles size={16} />
-            Senior DevOps Engineer | DevSecOps  | AI Enthusiast for Security and Reliability
+            Senior DevOps Engineer | DevSecOps | AI Enthusiast for Security and Reliability
           </div>
 
           <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
@@ -372,7 +372,7 @@ function ResearchDesign() {
     <section id="research" className="section-wrap bg-white">
       <SectionHeader
         eyebrow="Research Design"
-        title="Current research project: infrastructure automation delivery pipeline."
+        title="Research designs for secure automation, OpenShift governance, and AI-assisted DevSecOps."
         subtitle="A visual architecture artifact that shows how Risko thinks about automation governance, review gates, deployment safety, auditability, and handover discipline."
       />
 
