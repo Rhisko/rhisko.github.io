@@ -601,6 +601,29 @@ function Experience() {
   );
 }
 
+function CertificatePreview({ cert }: { cert: (typeof certificateAssets)[number] }) {
+  const previewImage = cert.thumbnail ?? (cert.type === "image" ? cert.file : "");
+
+  if (previewImage) {
+    return (
+      <img
+        src={assetPath(previewImage)}
+        alt={cert.title}
+        className="certificate-image"
+        loading="lazy"
+      />
+    );
+  }
+
+  return (
+    <span className="certificate-placeholder">
+      <FileText size={42} />
+      <span className="text-xs font-black uppercase text-[color:var(--accent)]">PDF Certificate</span>
+      <span className="max-w-[16rem] text-center text-sm font-black leading-6 text-white">{cert.title}</span>
+    </span>
+  );
+}
+
 function Certificates() {
   return (
     <section id="certificates" className="dark-section py-16 text-white">
@@ -616,11 +639,7 @@ function Certificates() {
           {certificateAssets.map((cert) => (
             <article key={cert.file} className="certificate-card">
               <a href={assetPath(cert.file)} target="_blank" rel="noreferrer" className="certificate-preview">
-                <img
-                  src={assetPath(cert.thumbnail ?? cert.file)}
-                  alt={cert.title}
-                  className="h-full w-full object-cover"
-                />
+                <CertificatePreview cert={cert} />
               </a>
               <div className="p-5">
                 <p className="text-xs font-black uppercase text-[color:var(--accent)]">{cert.issuer}</p>

@@ -436,7 +436,19 @@ body:has([data-theme="indigo"]) {
   }
 
   .certificate-preview {
-    @apply block h-56 border-b border-white/10 bg-slate-900;
+    @apply flex h-56 items-center justify-center border-b border-white/10 bg-slate-900;
+  }
+
+  .certificate-image {
+    @apply h-full w-full bg-white object-contain p-2;
+  }
+
+  .certificate-placeholder {
+    @apply flex h-full w-full flex-col items-center justify-center gap-3 bg-slate-950/60 p-6 text-slate-200;
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 34%),
+      radial-gradient(circle at 50% 20%, color-mix(in srgb, var(--primary) 24%, transparent), transparent 42%),
+      rgba(15, 23, 42, 0.82);
   }
 
   .credential-row {

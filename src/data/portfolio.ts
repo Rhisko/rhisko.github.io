@@ -11,7 +11,7 @@ export const profile = {
   github: "https://github.com/rhisko",
   technicalWriting: "",
   cvUrl: "/cv.pdf",
-  photoUrl: "/profile.jpeg"
+  photoUrl: "/profile.png"
 };
 
 export const metrics = [
@@ -393,6 +393,8 @@ export const certifications = [
   "Google Cloud Fundamentals, Core Infrastructure, Cloud Architecture, Kubernetes in Google Cloud / GKE, Terraform in Google Cloud",
   "Alibaba Cloud Professional Training",
   "AWS Academy - Cloud Developing",
+  "Artificial Intelligence webinars and applied AI learning",
+  "Natural Language Processing for healthcare, security, and learning",
   "Solo.io - Fundamentals for Istio",
   "Baba Studio - Data Science & Machine Learning with Python",
   "HPE Nimble & Rubrik - Hardware Repair & FRU Part Replacement"
@@ -432,6 +434,44 @@ export const certificateAssets = [
     issuer: "Google Cloud",
     category: "Cloud Architecture",
     file: "/assets/certifications/gcp-cloud-architecture-badge.png",
+    type: "image"
+  },
+  {
+    title: "Kecerdasan Artifisial, Sains Data dan Pendidikan Masa Depan",
+    issuer: "Universitas Pamulang / BRIN",
+    category: "Artificial Intelligence, Data Science, Education",
+    file: "/assets/certifications/Certification-Ai-01.pdf",
+    thumbnail: "/assets/certifications/thumbnails/certification-ai-01.jpg",
+    type: "pdf"
+  },
+  {
+    title: "Sinergi IoT, Artificial Intelligence, and Cyber Physical System",
+    issuer: "Universitas Pamulang",
+    category: "IoT, Artificial Intelligence, Cyber Physical System",
+    file: "/assets/certifications/Certification-Ai-02.pdf",
+    thumbnail: "/assets/certifications/thumbnails/certification-ai-02.jpg",
+    type: "pdf"
+  },
+  {
+    title: "Artificial Intelligence and Computer Vision",
+    issuer: "Universitas Pamulang / BRIN",
+    category: "Artificial Intelligence, Computer Vision",
+    file: "/assets/certifications/Certification-Ai-03.pdf",
+    thumbnail: "/assets/certifications/thumbnails/certification-ai-03.jpg",
+    type: "pdf"
+  },
+  {
+    title: "One Language, Many Benefits: NLP Technology",
+    issuer: "BRIN",
+    category: "NLP, Healthcare, Security, Learning",
+    file: "/assets/certifications/NLP .jpeg",
+    type: "image"
+  },
+  {
+    title: "Humanizing Artificial Intelligence",
+    issuer: "STEI ITB",
+    category: "Artificial Intelligence, Indonesian AI Ecosystem",
+    file: "/assets/certifications/ITB Ai.jpeg",
     type: "image"
   },
   {
