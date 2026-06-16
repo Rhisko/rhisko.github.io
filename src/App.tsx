@@ -202,12 +202,12 @@ function Hero() {
         <div className="text-white">
           <div className="premium-pill mb-6">
             <Sparkles size={16} />
-            Senior DevOps Engineer | DevSecOps | Cloud Reliability
+            DevSecOps | Automation Review | Cloud Reliability
           </div>
 
           <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
             {profile.name}
-            <span className="hero-accent block">builds secure platforms for reliable delivery.</span>
+            <span className="hero-accent block">keeps critical delivery moving safely.</span>
           </h1>
 
           <p className="dark-copy mt-6 max-w-3xl text-xl font-semibold leading-8 md:text-2xl">
@@ -240,8 +240,8 @@ function Hero() {
               <p className="eyebrow eyebrow-dark">Keep Moving Forward & Lifelong Learning</p>
               <h2 className="mt-3 text-3xl font-black text-white">{profile.role}</h2>
               <p className="dark-copy mt-3 text-sm leading-7">
-                8+ years delivering DevOps capability across CI/CD, cloud infrastructure, Kubernetes operations,
-                automation governance, and production reliability.
+                Practical engineering background across release workflows, infrastructure operations, security controls,
+                and incident-aware production support.
               </p>
             </div>
           </div>
@@ -285,8 +285,7 @@ function Hero() {
           <div className="mt-7 border-t border-white/10 pt-6">
             <p className="dark-muted text-sm font-bold uppercase">Summary</p>
             <p className="dark-copy mt-3 text-sm leading-7">
-              Risko strengthens production delivery by combining automation governance, cloud operations, CI/CD discipline,
-              observability, and DevSecOps controls across Kubernetes and infrastructure platforms.
+              Risko helps teams turn complex operational work into reviewed, repeatable, and observable delivery paths.
             </p>
           </div>
         </aside>

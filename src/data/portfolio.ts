@@ -1,9 +1,9 @@
 export const profile = {
   name: "Risko",
   role: "Senior DevOps Engineer | DevSecOps & Platform Reliability",
-  headline: "Cloud-native automation, CI/CD governance, and platform reliability for production teams.",
+  headline: "Secure delivery systems for teams that need releases to be fast, reviewed, and recoverable.",
   tagline:
-    "Senior DevOps Engineer with 8+ years of experience across platform automation, CI/CD engineering, cloud operations, Kubernetes, observability, and security-focused delivery. Backed by 10+ years in IT operations and postgraduate study in cybersecurity, data protection, and artificial intelligence.",
+    "Risko brings 8+ years in DevOps and 10+ years across IT operations, connecting CI/CD, Kubernetes, cloud infrastructure, observability, and security controls with practical production discipline.",
   location: "Pamulang, Tangerang Selatan",
   phone: "+62 813 1688 8438",
   email: "risko.alexander@gmail.com",

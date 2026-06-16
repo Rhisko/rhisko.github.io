@@ -252,8 +252,8 @@ body:has([data-theme="indigo"]) {
   }
 
   .profile-photo {
-    @apply relative h-[250px] w-full rounded-md object-cover;
-    object-position: 50% 13%;
+    @apply relative h-auto max-h-[420px] w-full rounded-md object-contain;
+    object-position: center;
     filter: grayscale(7%) contrast(1.07) saturate(0.94);
     z-index: 2;
   }
@@ -511,5 +511,11 @@ body:has([data-theme="indigo"]) {
 @media (min-width: 1024px) {
   .executive-panel {
     background: transparent;
+  }
+
+  .profile-photo {
+    height: 250px;
+    object-fit: cover;
+    object-position: 50% 13%;
   }
 }
