@@ -89,7 +89,7 @@ const professionalLinks = [
   {
     label: "GitHub",
     href: profile.github,
-    description: "Source code, portfolio work, and selected engineering samples.",
+    description: "Source code, implementation notes, and selected engineering references.",
     icon: GitBranch
   },
   {
@@ -232,12 +232,12 @@ function Hero() {
         </div>
 
         <aside className="executive-panel">
-          <div className="grid gap-6 md:grid-cols-[180px_1fr]">
+          <div className="grid gap-6 md:grid-cols-[240px_1fr]">
             <div className="profile-frame">
               <img src={assetPath(profile.photoUrl)} alt="Risko profile" className="profile-photo" />
             </div>
             <div>
-              <p className="eyebrow eyebrow-dark">Keep Moving Forward & Lifelong Learning</p>
+              <p className="eyebrow eyebrow-dark">Production Reliability & Continuous Learning</p>
               <h2 className="mt-3 text-3xl font-black text-white">{profile.role}</h2>
               <p className="dark-copy mt-3 text-sm leading-7">
                 Practical engineering background across release workflows, infrastructure operations, security controls,
@@ -285,7 +285,7 @@ function Hero() {
           <div className="mt-7 border-t border-white/10 pt-6">
             <p className="dark-muted text-sm font-bold uppercase">Summary</p>
             <p className="dark-copy mt-3 text-sm leading-7">
-              Risko helps teams turn complex operational work into reviewed, repeatable, and observable delivery paths.
+              Risko helps teams turn complex operational work into reviewed, repeatable, and observable workflows.
             </p>
           </div>
         </aside>
@@ -374,8 +374,8 @@ function ProfessionalLinks() {
       <div className="mx-auto max-w-7xl px-5">
         <SectionHeader
           eyebrow="Professional Links"
-          title="Engineering signals beyond the resume."
-          subtitle="Quick access for recruiters and technical interviewers who want to review public engineering work, source code, and external proof points."
+          title="Public engineering references."
+          subtitle="Quick access for recruiters and technical interviewers who want to review public work, source code, and external proof points."
         />
         <div className="grid gap-4 md:grid-cols-2">
           {professionalLinks.map((link) => {
@@ -474,9 +474,9 @@ function ResearchDesign() {
   return (
     <section id="research" className="section-wrap bg-white">
       <SectionHeader
-        eyebrow="Research Design"
-        title="Research-driven exploration of secure automation and platform governance."
-        subtitle="Architecture studies that reflect Risko's continuous exploration of OpenShift governance, AI-assisted DevSecOps, review gates, deployment safety, auditability, and operational handover."
+        eyebrow="Reference Architectures"
+        title="Secure automation and platform governance in practice."
+        subtitle="Reference architectures covering OpenShift governance, AI-assisted DevSecOps, review gates, deployment safety, auditability, and operational handover."
       />
 
       <div className="grid gap-6">
@@ -508,7 +508,7 @@ function ResearchDesign() {
               </ul>
 
               <a href={assetPath(design.viewerUrl)} className="btn-primary mt-6 w-fit">
-                Open Full Design
+                View Design
                 <ExternalLink className="ml-2" size={16} />
               </a>
             </div>
@@ -531,7 +531,7 @@ function ResearchDesign() {
 function Impact() {
   return (
     <section id="impact" className="section-wrap muted-section">
-      <SectionHeader eyebrow="Impact" title="Selected DevOps outcomes across production environments." />
+      <SectionHeader eyebrow="Impact" title="Selected DevOps work across production environments." />
       <div className="grid gap-5 lg:grid-cols-3">
         {projects.map((project) => (
           <article key={project.title} className="project-card">
@@ -558,7 +558,7 @@ function Impact() {
 function Experience() {
   return (
     <section id="experience" className="section-wrap">
-      <SectionHeader eyebrow="Experience" title="Career progression from infrastructure operations to senior DevOps leadership." />
+      <SectionHeader eyebrow="Experience" title="Career progression across infrastructure operations and senior DevOps delivery." />
       <div className="relative space-y-5">
         {journey.map((item) => {
           const isCurrentRole = item.year.includes("Present");
@@ -671,7 +671,7 @@ function EducationAndActivity() {
     <section className="section-wrap muted-section">
       <div className="grid gap-8 lg:grid-cols-2">
         <div>
-          <SectionHeader eyebrow="Education" title="Academic foundation and current postgraduate direction." />
+          <SectionHeader eyebrow="Education" title="Academic foundation and postgraduate focus." />
           <div className="space-y-4">
             {education.map((item) => (
               <article key={item.school} className="feature-card">
@@ -685,7 +685,7 @@ function EducationAndActivity() {
         </div>
 
         <div>
-          <SectionHeader eyebrow="Activities" title="Applied AI, cybersecurity learning, and technical community contribution." />
+          <SectionHeader eyebrow="Activities" title="Applied AI, cybersecurity learning, and technical contribution." />
           <div className="space-y-4">
             {achievements.map((item) => (
               <article
@@ -742,7 +742,7 @@ function Contact() {
       <div className="contact-panel">
         <div>
           <p className="eyebrow eyebrow-dark">Contact</p>
-          <h2 className="mt-3 text-3xl font-black text-white md:text-5xl">Available for senior DevOps and DevSecOps delivery.</h2>
+          <h2 className="mt-3 text-3xl font-black text-white md:text-5xl">Available for senior DevOps and DevSecOps roles.</h2>
           <p className="dark-copy mt-5 max-w-2xl leading-8">
             Best fit: regulated production environments that need stronger CI/CD, Kubernetes operations, cloud reliability,
             observability, security hardening, and automation governance.

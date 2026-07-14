@@ -1,9 +1,9 @@
 export const profile = {
   name: "Risko",
   role: "Senior DevOps Engineer | DevSecOps & Platform Reliability",
-  headline: "Secure delivery systems for teams that need releases to be fast, reviewed, and recoverable.",
+  headline: "Secure, observable delivery systems for teams that need fast releases with strong review and recovery controls.",
   tagline:
-    "Risko brings 8+ years in DevOps and 10+ years across IT operations, connecting CI/CD, Kubernetes, cloud infrastructure, observability, and security controls with practical production discipline.",
+    "Risko brings 8+ years in DevOps and 10+ years across IT operations, connecting CI/CD, Kubernetes, cloud infrastructure, observability, and security controls with practical production experience.",
   location: "Pamulang, Tangerang Selatan",
   phone: "+62 813 1688 8438",
   email: "risko.alexander@gmail.com",
@@ -17,23 +17,23 @@ export const profile = {
 export const metrics = [
   { value: "8+", label: "Years in DevOps" },
   { value: "10+", label: "Years Across IT" },
-  { value: "GCP", label: "Cloud & GKE Platforms" },
-  { value: "DevSecOps", label: "Governance & Security" }
+  { value: "GCP", label: "Cloud & GKE Delivery" },
+  { value: "DevSecOps", label: "Security Governance" }
 ];
 
 export const professionalFocus = [
   {
     title: "Production Platform Leadership",
-    value: "DevOps leadership for regulated and business-critical environments",
+    value: "DevOps leadership for regulated and business-critical platforms",
     detail:
-      "Turns delivery goals into reliable automation, disciplined technical review, and operational controls for environments where downtime and change risk matter.",
+      "Translates delivery goals into reliable automation, disciplined technical review, and operational controls for environments where downtime and change risk matter.",
     tools: ["Jenkins", "Kubernetes", "Google Cloud Platform", "Linux"]
   },
   {
     title: "Automation Risk Review",
-    value: "Jenkins, Ansible, VMware, Python, Bash, and Groovy review",
+    value: "Automation review across Jenkins, Ansible, VMware, Python, Bash, and Groovy",
     detail:
-      "Reviews workflows before execution to detect unsafe changes, strengthen validation, and keep provisioning repeatable.",
+      "Reviews automation before execution to identify unsafe changes, strengthen validation, and keep provisioning repeatable.",
     tools: ["Jenkins", "Ansible", "VMware", "Python", "Bash", "Groovy"]
   },
   {
@@ -45,18 +45,18 @@ export const professionalFocus = [
   },
   {
     title: "Infrastructure Foundation",
-    value: "Systems, networks, backup, and field support roots",
+    value: "Systems, networking, backup, and field support foundation",
     detail:
-      "Grounded in Linux administration, enterprise hardware support, troubleshooting, and service recovery before progressing into senior platform engineering.",
+      "Grounded in hands-on Linux administration, enterprise hardware support, troubleshooting, and service recovery before progressing into senior platform engineering.",
     tools: ["Linux", "VMware", "MySQL", "NGINX", "Apache"]
   }
 ];
 
 export const about = {
-  title: "Senior DevOps engineer for regulated, production-grade platforms.",
+  title: "Senior DevOps engineer for production-grade, regulated platforms.",
   paragraphs: [
-    "Risko improves the engineering systems behind production delivery: Jenkins pipelines, Ansible playbooks, VMware workflows, Kubernetes deployments, observability platforms, and cloud infrastructure across Google Cloud Platform and Alibaba Cloud.",
-    "His work connects reliability engineering, automation governance, security hardening, vulnerability assessment, observability, and operational discipline. He is also pursuing a Master's Degree in Informatics Engineering with academic focus on cybersecurity, data protection, and artificial intelligence."
+    "Risko improves the engineering systems behind production delivery, including Jenkins pipelines, Ansible playbooks, VMware workflows, Kubernetes deployments, observability platforms, and cloud infrastructure across Google Cloud Platform and Alibaba Cloud.",
+    "His work connects reliability engineering, automation governance, security hardening, vulnerability assessment, observability, and operational discipline. He is also pursuing a Master's Degree in Informatics Engineering with a focus on cybersecurity, data protection, and artificial intelligence."
   ],
   highlights: [
     {
@@ -72,7 +72,7 @@ export const about = {
     {
       title: "Operational Security",
       description:
-        "Converts hardening, access protection, scanning, WAF, Cloud Armor, and Vault practices into practical delivery controls."
+        "Applies hardening, access protection, scanning, WAF, Cloud Armor, and Vault practices as practical delivery controls."
     },
     {
       title: "Observability & Cost",
@@ -92,7 +92,7 @@ export const competencies = [
   "Monitoring, Observability & Incident Response",
   "Python, Bash & Groovy Automation",
   "Technical Review, Mentoring & Cross-Team Delivery",
-  "AI-assisted Security Analysis"
+  "AI-Assisted Security Analysis"
 ];
 
 export const skills = [
@@ -129,25 +129,25 @@ export const skills = [
 export const researchDesigns = [
   {
     title: "Infrastructure Automation Delivery Pipeline",
-    category: "Research Design | Platform-Agnostic Automation",
+    category: "Reference Architecture | Platform-Agnostic Automation",
     image: "/assets/Design/Infra_design_automation_1.png",
     viewerUrl: "/design-infra-automation.html",
     description:
-      "A research design for a secure, auditable, and repeatable infrastructure automation pipeline. The flow covers request intake, AI-assisted review, engineer approval, Terraform/Ansible preparation, state locking, deployment validation, and Confluence-based handover.",
+      "A reference architecture for a secure, auditable, and repeatable infrastructure automation pipeline. The flow covers request intake, AI-assisted review, engineer approval, Terraform/Ansible preparation, state locking, deployment validation, and Confluence-based handover.",
     stack: ["Jira", "Jenkins", "Terraform", "Ansible", "Confluence", "OpenAI", "Claude", "DevSecOps"],
     highlights: [
-      "Defines review gates before infrastructure changes reach production execution.",
+      "Defines review gates before infrastructure changes are executed in production.",
       "Combines AI-assisted review with engineer approval to reduce automation risk.",
       "Documents audit trail, deployment status flow, Terraform state lock, and handover process."
     ]
   },
   {
     title: "OpenShift Platform Request Automation",
-    category: "Research Design | OpenShift Governance Automation",
+    category: "Reference Architecture | OpenShift Governance Automation",
     image: "/assets/Design/Infra_design_automation_2.png",
     viewerUrl: "/design-openshift-automation.html",
     description:
-      "A research design for automating OpenShift platform requests through controlled approvals, Jenkins validation, Git-based manifest generation, pull request review, Argo CD synchronization, and structured failure handling.",
+      "A reference architecture for automating OpenShift platform requests through controlled approvals, Jenkins validation, Git-based manifest generation, pull request review, Argo CD synchronization, and structured failure handling.",
     stack: ["Jira", "Jenkins", "Git", "GitHub", "GitLab", "Argo CD", "OpenShift", "RBAC", "PVC"],
     highlights: [
       "Covers namespace, quota/LimitRange, RBAC, and PVC request flows with manual approval gates.",
@@ -157,11 +157,11 @@ export const researchDesigns = [
   },
   {
     title: "Intelligent DevSecOps Framework",
-    category: "Research Design | AI-Assisted DevSecOps",
+    category: "Reference Architecture | AI-Assisted DevSecOps",
     image: "/assets/Design/Infra_design_automation_3.png",
     viewerUrl: "/design-intelligent-devsecops.html",
     description:
-      "A research design for an AI-assisted DevSecOps framework connecting source control, Jenkins, linting, Semgrep SAST, container image builds, Trivy scanning, SonarQube quality gates, LangChain advisory, human review, Kubernetes deployment, and audit trail storage.",
+      "A reference architecture for an AI-assisted DevSecOps framework connecting source control, Jenkins, linting, Semgrep SAST, container image builds, Trivy scanning, SonarQube quality gates, LangChain advisory, human review, Kubernetes deployment, and audit trail storage.",
     stack: ["GitHub", "Jenkins", "Semgrep", "Docker", "Trivy", "SonarQube", "LangChain", "Kubernetes", "Slack"],
     highlights: [
       "Combines automated validation, security scanning, AI advisory, and human approval before release.",
@@ -176,10 +176,10 @@ export const projects = [
     title: "Network Automation Provisioning",
     company: "PT. Bank Danamon Indonesia Tbk",
     description:
-      "Built automation support for network operations provisioning workflows across F5 and Infoblox devices.",
+      "Built automation for network operations provisioning workflows across F5 and Infoblox devices.",
     stack: ["F5", "Infoblox", "Network Automation", "Python", "API", "Provisioning"],
     impact:
-      "Reduced manual operational steps, standardized request execution, and improved review readiness before infrastructure changes."
+      "Reduced manual operational steps, standardized request execution, and improved review quality before infrastructure changes."
   },
   {
     title: "VMware Provisioning Automation Review",
@@ -197,16 +197,16 @@ export const projects = [
       "Partnered with infrastructure and hardening teams to automate server baseline checks and vulnerability assessment tasks.",
     stack: ["Ansible", "Linux", "Hardening", "Vulnerability Assessment"],
     impact:
-      "Made hardening activities more repeatable, easier to review, and better aligned with operational security expectations."
+      "Made hardening activities more repeatable, easier to review, and better aligned with operational security requirements."
   },
   {
     title: "Cloud Monitoring & Cost Optimization",
     company: "PT. Jaya Agung Teknologi",
     description:
-      "Integrated Grafana with Google Cloud Monitoring and reviewed monitoring usage against cloud resource consumption.",
+      "Integrated Grafana with Google Cloud Monitoring and reviewed monitoring usage to reduce overlap and improve cost visibility.",
     stack: ["GCP", "Grafana", "Prometheus", "Cloud Monitoring"],
     impact:
-      "Reduced redundant tooling and created a centralized observability source for better visibility and cost discipline."
+      "Reduced redundant tooling and created a centralized observability view for better visibility and cost discipline."
   },
   {
     title: "Kubernetes & GitOps Modernization",
@@ -215,7 +215,7 @@ export const projects = [
       "Designed and maintained Jenkins and ArgoCD workflows for Kubernetes workloads across cloud environments.",
     stack: ["Jenkins", "ArgoCD", "Kubernetes", "GKE", "Helm"],
     impact:
-      "Improved deployment consistency, release confidence, and cloud-native operational flexibility."
+      "Improved deployment consistency, release confidence, and day-to-day Kubernetes operations."
   },
   {
     title: "Application Containerization Standards",
@@ -230,7 +230,7 @@ export const projects = [
     title: "Multi-Site Network & POS Implementation",
     company: "Indosoft IT Konsultan",
     description:
-      "Handled network infrastructure and POS software implementation for hotel and entertainment business clients across multiple locations.",
+      "Delivered network infrastructure and POS software implementation for hotel and entertainment business clients across multiple locations.",
     stack: ["Network Setup", "POS Software", "System Configuration", "Troubleshooting", "Client Handover"],
     impact:
       "Improved rollout consistency through structured setup, user coordination, troubleshooting, and operational handover."
@@ -284,7 +284,7 @@ export const journey = [
     description:
       "Delivered on-site enterprise server hardware support, failed component replacement, validation, client coordination, and technical reporting.",
     details: [
-      "Handled enterprise server service restoration through hardware diagnosis, FRU replacement, and post-replacement validation.",
+      "Delivered enterprise server service restoration through hardware diagnosis, FRU replacement, and post-replacement validation.",
       "Coordinated with clients and remote technical teams to complete field activities with clear reporting."
     ],
     focus: "Enterprise Server Support, Hardware Replacement, Service Restoration, Client Communication"
@@ -368,7 +368,7 @@ export const achievements = [
   {
     title: "Postgraduate Academic Development",
     description:
-      "Building deeper academic capability in cybersecurity, DevSecOps, artificial intelligence, applied security, and data protection."
+      "Developing postgraduate capability in cybersecurity, DevSecOps, artificial intelligence, applied security, and data protection."
   }
 ];
 
