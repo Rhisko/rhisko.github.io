@@ -6,7 +6,7 @@ export const profile = {
     "Risko brings 8+ years in DevOps and 10+ years across IT operations, connecting CI/CD, Kubernetes, cloud infrastructure, observability, and security controls with practical production experience.",
   location: "Pamulang, Tangerang Selatan",
   phone: "+62 813 1688 8438",
-  email: "itsme.risko@gmail.com",
+  email: "risko.alexander@gmail.com",
   linkedin: "https://www.linkedin.com/in/risko-237416106",
   github: "https://github.com/rhisko",
   technicalWriting: "",
