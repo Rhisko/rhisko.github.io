@@ -1,5 +1,5 @@
 export const profile = {
-  name: "Risko",
+  name: "Risko, S.Si., M.Kom.",
   role: "Senior DevOps Engineer | DevSecOps & Platform Reliability",
   headline: "Secure, observable delivery systems for teams that need fast releases with strong review and recovery controls.",
   tagline:
