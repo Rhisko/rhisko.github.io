@@ -376,7 +376,7 @@ export const education = [
   {
     school: "Pamulang University",
     program: "Master's Degree in Informatics Engineering",
-    year: "2024 - 2026",
+    year: "September 2024 - July 2026",
     detail:
       "GPA: 3.84"
   },
