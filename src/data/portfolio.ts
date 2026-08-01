@@ -56,7 +56,7 @@ export const about = {
   title: "Senior DevOps engineer for production-grade, regulated platforms.",
   paragraphs: [
     "Risko improves the engineering systems behind production delivery, including Jenkins pipelines, Ansible playbooks, VMware workflows, Kubernetes deployments, observability platforms, and cloud infrastructure across Google Cloud Platform and Alibaba Cloud.",
-    "His work connects reliability engineering, automation governance, security hardening, vulnerability assessment, observability, and operational discipline. He is also pursuing a Master's Degree in Informatics Engineering with a focus on cybersecurity, data protection, and artificial intelligence."
+    "His work connects reliability engineering, automation governance, security hardening, vulnerability assessment, observability, and operational discipline. He has completed a Master's Degree in Informatics Engineering, with postgraduate focus in cybersecurity, data protection, DevSecOps, and artificial intelligence."
   ],
   highlights: [
     {
@@ -366,9 +366,9 @@ export const achievements = [
     ]
   },
   {
-    title: "Postgraduate Academic Development",
+    title: "Master's Degree Completion",
     description:
-      "Developing postgraduate capability in cybersecurity, DevSecOps, artificial intelligence, applied security, and data protection."
+      "Completed postgraduate study in Informatics Engineering, strengthening his focus in cybersecurity, DevSecOps, artificial intelligence, applied security, and data protection."
   }
 ];
 

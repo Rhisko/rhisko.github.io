@@ -671,7 +671,7 @@ function EducationAndActivity() {
     <section className="section-wrap muted-section">
       <div className="grid gap-8 lg:grid-cols-2">
         <div>
-          <SectionHeader eyebrow="Education" title="Academic foundation and postgraduate focus." />
+          <SectionHeader eyebrow="Education" title="Academic foundation and completed postgraduate study." />
           <div className="space-y-4">
             {education.map((item) => (
               <article key={item.school} className="feature-card">
