@@ -376,9 +376,9 @@ export const education = [
   {
     school: "Pamulang University",
     program: "Master's Degree in Informatics Engineering",
-    year: "2024 - Present",
+    year: "2024 - 2026",
     detail:
-      "Postgraduate focus on cybersecurity, DevSecOps, artificial intelligence, and data protection. Thesis direction: information security controls for DevSecOps delivery."
+      "GPA: 3.84"
   },
   {
     school: "STMIK GICI Business School Batam",
