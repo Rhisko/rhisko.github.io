@@ -207,7 +207,7 @@ function Hero() {
 
           <h1 className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl">
             {profile.name}
-            <span className="hero-accent block">keeps critical delivery moving safely.</span>
+            <span className="hero-accent block">delivers safer releases for critical platforms.</span>
           </h1>
 
           <p className="dark-copy mt-6 max-w-3xl text-xl font-semibold leading-8 md:text-2xl">
@@ -237,11 +237,11 @@ function Hero() {
               <img src={assetPath(profile.photoUrl)} alt="Risko profile" className="profile-photo" />
             </div>
             <div>
-              <p className="eyebrow eyebrow-dark">Production Reliability & Continuous Learning</p>
+              <p className="eyebrow eyebrow-dark">Production Reliability & Master's Graduate</p>
               <h2 className="mt-3 text-3xl font-black text-white">{profile.role}</h2>
               <p className="dark-copy mt-3 text-sm leading-7">
                 Practical engineering background across release workflows, infrastructure operations, security controls,
-                and incident-aware production support.
+                incident-aware production support, and completed postgraduate study in Informatics Engineering.
               </p>
             </div>
           </div>
@@ -283,9 +283,9 @@ function Hero() {
           </div>
 
           <div className="mt-7 border-t border-white/10 pt-6">
-            <p className="dark-muted text-sm font-bold uppercase">Summary</p>
+            <p className="dark-muted text-sm font-bold uppercase">Profile Snapshot</p>
             <p className="dark-copy mt-3 text-sm leading-7">
-              Risko helps teams turn complex operational work into reviewed, repeatable, and observable workflows.
+              Risko turns complex operational work into reviewed, repeatable, and observable delivery workflows.
             </p>
           </div>
         </aside>
@@ -374,8 +374,8 @@ function ProfessionalLinks() {
       <div className="mx-auto max-w-7xl px-5">
         <SectionHeader
           eyebrow="Professional Links"
-          title="Public engineering references."
-          subtitle="Quick access for recruiters and technical interviewers who want to review public work, source code, and external proof points."
+          title="Engineering references."
+          subtitle="Source code, implementation notes, and public material that show how Risko approaches DevOps, automation, and platform reliability work."
         />
         <div className="grid gap-4 md:grid-cols-2">
           {professionalLinks.map((link) => {
@@ -531,7 +531,7 @@ function ResearchDesign() {
 function Impact() {
   return (
     <section id="impact" className="section-wrap muted-section">
-      <SectionHeader eyebrow="Impact" title="Selected DevOps work across production environments." />
+      <SectionHeader eyebrow="Impact" title="DevOps work delivered in production environments." />
       <div className="grid gap-5 lg:grid-cols-3">
         {projects.map((project) => (
           <article key={project.title} className="project-card">
@@ -630,7 +630,7 @@ function Certificates() {
         <SectionHeader
           eyebrow="Certificates"
           title="Training and certification highlights."
-          subtitle="Selected credentials across DevOps, cloud, Kubernetes, storage, backup and recovery, service mesh, data science, and machine learning."
+          subtitle="Credentials across DevOps, cloud, Kubernetes, storage, backup and recovery, service mesh, data science, and machine learning."
           dark
         />
 
@@ -671,7 +671,7 @@ function EducationAndActivity() {
     <section className="section-wrap muted-section">
       <div className="grid gap-8 lg:grid-cols-2">
         <div>
-          <SectionHeader eyebrow="Education" title="Academic foundation and completed postgraduate study." />
+          <SectionHeader eyebrow="Education" title="Formal education and postgraduate completion." />
           <div className="space-y-4">
             {education.map((item) => (
               <article key={item.school} className="feature-card">
@@ -742,9 +742,9 @@ function Contact() {
       <div className="contact-panel">
         <div>
           <p className="eyebrow eyebrow-dark">Contact</p>
-          <h2 className="mt-3 text-3xl font-black text-white md:text-5xl">Available for senior DevOps and DevSecOps roles.</h2>
+          <h2 className="mt-3 text-3xl font-black text-white md:text-5xl">Senior DevOps and DevSecOps work for production teams.</h2>
           <p className="dark-copy mt-5 max-w-2xl leading-8">
-            Best fit: regulated production environments that need stronger CI/CD, Kubernetes operations, cloud reliability,
+            Focused on regulated production environments that need stronger CI/CD, Kubernetes operations, cloud reliability,
             observability, security hardening, and automation governance.
           </p>
         </div>
@@ -799,7 +799,7 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-6">
         <div className="flex flex-col gap-2 text-center text-xs font-semibold text-slate-300 md:flex-row md:items-center md:justify-between md:text-left">
           <p>© {new Date().getFullYear()} {profile.name}. All rights reserved.</p>
-          <p>Driven by continuous improvement, secure delivery, and production-grade reliability.</p>
+          <p>Continuous improvement, secure delivery, and production reliability.</p>
         </div>
       </div>
     </footer>

@@ -1,9 +1,9 @@
 export const profile = {
   name: "Risko, S.Si., M.Kom.",
   role: "Senior DevOps Engineer | DevSecOps & Platform Reliability",
-  headline: "Secure, observable delivery systems for teams that need fast releases with strong review and recovery controls.",
+  headline: "Secure, observable delivery systems for regulated teams that need fast releases, clear review gates, and reliable recovery paths.",
   tagline:
-    "Risko brings 8+ years in DevOps and 10+ years across IT operations, connecting CI/CD, Kubernetes, cloud infrastructure, observability, and security controls with practical production experience.",
+    "8+ years in DevOps and 10+ years across IT operations, with hands-on work in CI/CD, Kubernetes, cloud infrastructure, observability, and security controls.",
   location: "Pamulang, Tangerang Selatan",
   phone: "+62 813 1688 8438",
   email: "risko.alexander@gmail.com",
@@ -53,10 +53,10 @@ export const professionalFocus = [
 ];
 
 export const about = {
-  title: "Senior DevOps engineer for production-grade, regulated platforms.",
+  title: "Senior DevOps engineer with completed postgraduate study in Informatics Engineering.",
   paragraphs: [
     "Risko improves the engineering systems behind production delivery, including Jenkins pipelines, Ansible playbooks, VMware workflows, Kubernetes deployments, observability platforms, and cloud infrastructure across Google Cloud Platform and Alibaba Cloud.",
-    "His work connects reliability engineering, automation governance, security hardening, vulnerability assessment, observability, and operational discipline. He has completed a Master's Degree in Informatics Engineering, with postgraduate focus in cybersecurity, data protection, DevSecOps, and artificial intelligence."
+    "His work connects reliability engineering, automation governance, security hardening, vulnerability assessment, observability, and operational discipline. He graduated with a Master's Degree in Informatics Engineering in July 2026, with postgraduate focus in cybersecurity, data protection, DevSecOps, and artificial intelligence."
   ],
   highlights: [
     {
@@ -366,9 +366,9 @@ export const achievements = [
     ]
   },
   {
-    title: "Master's Degree Completion",
+    title: "Graduated - Master's Degree in Informatics Engineering",
     description:
-      "Completed postgraduate study in Informatics Engineering, strengthening his focus in cybersecurity, DevSecOps, artificial intelligence, applied security, and data protection."
+      "Completed postgraduate study at Pamulang University from September 2024 to July 2026, strengthening his focus in cybersecurity, DevSecOps, artificial intelligence, applied security, and data protection."
   }
 ];
 
@@ -378,7 +378,7 @@ export const education = [
     program: "Master's Degree in Informatics Engineering",
     year: "September 2024 - July 2026",
     detail:
-      "GPA: 3.84"
+      "Graduated July 2026 | GPA: 3.84"
   },
   {
     school: "STMIK GICI Business School Batam",
