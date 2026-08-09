@@ -382,7 +382,7 @@ export const education = [
   },
   {
     school: "STMIK GICI Business School Batam",
-    program: "Bachelor's Degree in Information Systems",
+    program: "Bachelor's Degree in Computer Science",
     year: "August 2011 - September 2016",
     detail: "GPA: 3.26"
   }
