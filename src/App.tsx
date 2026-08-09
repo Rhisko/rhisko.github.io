@@ -241,7 +241,7 @@ function Hero() {
               <h2 className="mt-3 text-3xl font-black text-white">{profile.role}</h2>
               <p className="dark-copy mt-3 text-sm leading-7">
                 Practical engineering background across release workflows, infrastructure operations, security controls,
-                incident-aware production support, and completed postgraduate study in Informatics Engineering.
+                incident-aware production support, and completed postgraduate study in Computer Science.
               </p>
             </div>
           </div>

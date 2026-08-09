@@ -53,10 +53,10 @@ export const professionalFocus = [
 ];
 
 export const about = {
-  title: "Senior DevOps engineer with completed postgraduate study in Informatics Engineering.",
+  title: "Senior DevOps engineer with completed postgraduate study in Computer Science.",
   paragraphs: [
     "Risko improves the engineering systems behind production delivery, including Jenkins pipelines, Ansible playbooks, VMware workflows, Kubernetes deployments, observability platforms, and cloud infrastructure across Google Cloud Platform and Alibaba Cloud.",
-    "His work connects reliability engineering, automation governance, security hardening, vulnerability assessment, observability, and operational discipline. He graduated with a Master's Degree in Informatics Engineering in July 2026, with postgraduate focus in cybersecurity, data protection, DevSecOps, and artificial intelligence."
+    "His work connects reliability engineering, automation governance, security hardening, vulnerability assessment, observability, and operational discipline. He graduated with a Master's Degree in Computer Science in July 2026, with postgraduate focus in cybersecurity, data protection, DevSecOps, and artificial intelligence."
   ],
   highlights: [
     {
@@ -366,7 +366,7 @@ export const achievements = [
     ]
   },
   {
-    title: "Graduated - Master's Degree in Informatics Engineering",
+    title: "Graduated - Master's Degree in Computer Science",
     description:
       "Completed postgraduate study at Pamulang University from September 2024 to July 2026, strengthening his focus in cybersecurity, DevSecOps, artificial intelligence, applied security, and data protection."
   }
@@ -375,7 +375,7 @@ export const achievements = [
 export const education = [
   {
     school: "Pamulang University",
-    program: "Master's Degree in Informatics Engineering",
+    program: "Master's Degree in Computer Science",
     year: "September 2024 - July 2026",
     detail:
       "Graduated July 2026 | GPA: 3.84"
