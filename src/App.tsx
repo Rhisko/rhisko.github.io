@@ -240,8 +240,7 @@ function Hero() {
               <p className="eyebrow eyebrow-dark">Production Reliability & Master's Graduate</p>
               <h2 className="mt-3 text-3xl font-black text-white">{profile.role}</h2>
               <p className="dark-copy mt-3 text-sm leading-7">
-                Practical engineering background across release workflows, infrastructure operations, security controls,
-                incident-aware production support, and completed postgraduate study in Computer Science.
+                Experienced DevOps and infrastructure professional with a strong background in release engineering, infrastructure automation, security operations, and production reliability, backed by a Master’s degree in Computer Science.
               </p>
             </div>
           </div>
