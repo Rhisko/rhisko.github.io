@@ -1,7 +1,7 @@
 export const profile = {
   name: "Risko, S.Si., M.Kom.",
-  role: "Senior DevOps Engineer | DevSecOps & Platform Reliability",
-  headline: "Secure, observable delivery systems for regulated teams that need fast releases, clear review gates, and reliable recovery paths.",
+  role: "Senior DevOps Engineer | DevSecOps Engineer | AI-Driven Automation",
+  headline: "Engineering secure, scalable, and observable delivery systems for enterprise environments where reliability, compliance, and speed matter.",
   tagline:
     "8+ years in DevOps and 10+ years across IT operations, with hands-on work in CI/CD, Kubernetes, cloud infrastructure, observability, and security controls.",
   location: "Pamulang, Tangerang Selatan",
